@@ -1,0 +1,595 @@
+{
+  "model": "twin-dam.glb",
+  "assetRevision": "TWIN_Soyang_Model_1037f0df",
+  "name": "소양강댐 외형 참고 모델",
+  "version": 4,
+  "powerhouseUnits": 2,
+  "description": "Original visual approximation; synthetic operating data; no surveyed bathymetry or CFD.",
+  "reservoir": {
+    "center": [
+      65,
+      118.5,
+      -648
+    ],
+    "size": [
+      1270,
+      1304
+    ],
+    "minY": 116.0,
+    "maxY": 121.5,
+    "polygon": [
+      [
+        -570,
+        4
+      ],
+      [
+        700,
+        4
+      ],
+      [
+        700,
+        -1300
+      ],
+      [
+        -570,
+        -1300
+      ]
+    ],
+    "depthM": 45,
+    "hydraulicAssumptions": true,
+    "boundaryMode": "under-terrain; visible shoreline is terrain intersection",
+    "maxWaveDisplacementM": 0.45,
+    "displayLevelNote": "Compressed illustrative elevations; operating water levels stay unchanged"
+  },
+  "river": {
+    "points": [
+      [
+        315,
+        2.3,
+        372
+      ],
+      [
+        315,
+        2.3,
+        428
+      ],
+      [
+        300,
+        2.2,
+        446
+      ],
+      [
+        270,
+        2.1,
+        465
+      ],
+      [
+        212,
+        2.0,
+        555
+      ],
+      [
+        230,
+        1.6,
+        700
+      ],
+      [
+        295,
+        1.0,
+        850
+      ]
+    ],
+    "width": 68,
+    "widths": [
+      79,
+      79,
+      70,
+      68,
+      68,
+      68,
+      68
+    ],
+    "roughnessN": 0.035,
+    "hydraulicAssumptions": true
+  },
+  "channels": [
+    {
+      "name": "spillway-visual",
+      "kind": "spill",
+      "interpolation": "linear",
+      "width": 61,
+      "widths": [
+        67,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        66,
+        70
+      ],
+      "points": [
+        [
+          315,
+          115.34,
+          -4
+        ],
+        [
+          315,
+          111.34,
+          28
+        ],
+        [
+          315,
+          96.34,
+          80
+        ],
+        [
+          315,
+          70.34,
+          155
+        ],
+        [
+          315,
+          43.34,
+          230
+        ],
+        [
+          315,
+          17.34,
+          305
+        ],
+        [
+          315,
+          7.34,
+          350
+        ],
+        [
+          315,
+          6.9784,
+          352.1056
+        ],
+        [
+          315,
+          6.8227,
+          354.2363
+        ],
+        [
+          315,
+          6.8743,
+          356.372
+        ],
+        [
+          315,
+          7.1329,
+          358.4927
+        ],
+        [
+          315,
+          7.596,
+          360.5783
+        ],
+        [
+          315,
+          8.2592,
+          362.6092
+        ],
+        [
+          315,
+          9.1162,
+          364.5661
+        ],
+        [
+          315,
+          10.1591,
+          366.4307
+        ],
+        [
+          315,
+          14.2332,
+          374.9112
+        ],
+        [
+          315,
+          15.8574,
+          383.3917
+        ],
+        [
+          315,
+          15.0316,
+          391.8721
+        ],
+        [
+          315,
+          11.7558,
+          400.3526
+        ],
+        [
+          315,
+          7.3712,
+          407.137
+        ],
+        [
+          315,
+          1.7534,
+          413.5822
+        ],
+        [
+          315,
+          2.74,
+          426.0
+        ]
+      ],
+      "bedPoints": [
+        [
+          315,
+          115,
+          -4
+        ],
+        [
+          315,
+          111,
+          28
+        ],
+        [
+          315,
+          96,
+          80
+        ],
+        [
+          315,
+          70,
+          155
+        ],
+        [
+          315,
+          43,
+          230
+        ],
+        [
+          315,
+          17,
+          305
+        ],
+        [
+          315,
+          7,
+          350
+        ],
+        [
+          315,
+          6.6384,
+          352.1056
+        ],
+        [
+          315,
+          6.4827,
+          354.2363
+        ],
+        [
+          315,
+          6.5343,
+          356.372
+        ],
+        [
+          315,
+          6.7929,
+          358.4927
+        ],
+        [
+          315,
+          7.256,
+          360.5783
+        ],
+        [
+          315,
+          7.9192,
+          362.6092
+        ],
+        [
+          315,
+          8.7762,
+          364.5661
+        ],
+        [
+          315,
+          9.8191,
+          366.4307
+        ],
+        [
+          315,
+          13.8932,
+          374.9112
+        ],
+        [
+          315,
+          15.5174,
+          383.3917
+        ],
+        [
+          315,
+          14.6916,
+          391.8721
+        ],
+        [
+          315,
+          11.4158,
+          400.3526
+        ],
+        [
+          315,
+          7.0312,
+          407.137
+        ],
+        [
+          315,
+          1.4134,
+          413.5822
+        ],
+        [
+          315,
+          2.4,
+          426.0
+        ]
+      ],
+      "bedOffsetM": -0.34,
+      "roughnessN": 0.016,
+      "hydraulicAssumptions": true,
+      "freeJetFrom": 14
+    },
+    {
+      "name": "powerhouse-tailrace-visual",
+      "kind": "turbine",
+      "width": 30,
+      "widths": [
+        100,
+        92,
+        30,
+        30,
+        30,
+        30
+      ],
+      "points": [
+        [
+          -153,
+          8,
+          379
+        ],
+        [
+          -153,
+          7.6,
+          401
+        ],
+        [
+          -90,
+          6.6,
+          410
+        ],
+        [
+          20,
+          4.8,
+          440
+        ],
+        [
+          180,
+          3.4,
+          469
+        ],
+        [
+          270,
+          2.1,
+          465
+        ]
+      ],
+      "roughnessN": 0.028,
+      "hydraulicAssumptions": true
+    }
+  ],
+  "cameras": {
+    "overview": {
+      "position": [
+        650,
+        500,
+        800
+      ],
+      "target": [
+        10,
+        75,
+        55
+      ]
+    },
+    "upstream": {
+      "position": [
+        -665,
+        433,
+        -615
+      ],
+      "target": [
+        28,
+        94,
+        -30
+      ]
+    },
+    "spillway": {
+      "position": [
+        524,
+        272,
+        476
+      ],
+      "target": [
+        312,
+        67,
+        135
+      ]
+    },
+    "downstream": {
+      "position": [
+        223,
+        195,
+        840
+      ],
+      "target": [
+        37,
+        75,
+        125
+      ]
+    },
+    "top": {
+      "position": [
+        45,
+        1450,
+        130
+      ],
+      "target": [
+        45,
+        0,
+        130
+      ]
+    },
+    "inlet": {
+      "position": [
+        454,
+        186,
+        -183
+      ],
+      "target": [
+        309,
+        119,
+        -20
+      ]
+    },
+    "shoreline": {
+      "position": [
+        689,
+        250,
+        -846
+      ],
+      "target": [
+        410,
+        119,
+        -620
+      ]
+    },
+    "plaza": {
+      "position": [
+        474,
+        134.5,
+        6
+      ],
+      "target": [
+        250,
+        122,
+        -40
+      ]
+    },
+    "powerhouse": {
+      "position": [
+        -20,
+        120,
+        560
+      ],
+      "target": [
+        -150,
+        22,
+        345
+      ]
+    },
+    "bucket": {
+      "position": [
+        430,
+        74,
+        500
+      ],
+      "target": [
+        308,
+        6,
+        398
+      ]
+    }
+  },
+  "shadowRadius": 850,
+  "boundaryContract": {
+    "coordinateSystem": "exported Y-up; reservoir polygon is [x,z]",
+    "renderLevelRangeM": [
+      116.0,
+      121.5
+    ],
+    "frontBoundaryBlenderY": -4,
+    "frontSeals": [
+      "rockfill body",
+      "closed abutment saddles",
+      "gate piers and forebay"
+    ],
+    "shorelineEdges": "All polygon sides except front must overlap terrain above 122 m including waves",
+    "forebayFloorPoints": [
+      [
+        315,
+        115.0,
+        -4.0
+      ],
+      [
+        315,
+        111.5,
+        -40.0
+      ],
+      [
+        315,
+        105.0,
+        -100.0
+      ]
+    ],
+    "unmeasuredIllustrativeGeometry": true
+  },
+  "referenceDimensions": {
+    "crestLengthM": 530,
+    "damHeightM": 123,
+    "status": "visual reference only; operating config remains synthetic"
+  },
+  "hydraulicAssumptions": {
+    "status": "uncalibrated visual assumptions only",
+    "reservoirDepthM": 45,
+    "roughness": "Manning n estimates; no measured channel survey or hydraulic calibration"
+  },
+  "materials": {
+    "source": "original procedural PBR maps; no external media",
+    "uvScale": "metres",
+    "maps": [
+      "base color",
+      "tangent normal",
+      "roughness"
+    ],
+    "foliage": "5400 multi-lobed irregular broadleaf trees"
+  },
+  "detailPass": {
+    "version": "1.5",
+    "items": [
+      "radial gates with trunnion arms, pier noses, bridge rails and lamps",
+      "flip bucket, free jet, plunge pool, training walls",
+      "two generating units",
+      "terrain 2x resolution with high-slope detail",
+      "left-abutment service building on the saddle plateau",
+      "valley road on sloped embankments, tailrace bridge with abutments, 5-14 % ramps",
+      "cable duct instead of sagging feeders",
+      "intake tower withdrawal tiers, gate guides, staff gauge, hoist portal",
+      "spillway gate gantries, wire ropes, crane rails",
+      "switchyard, three pylons, conductors",
+      "downstream road bridge, approach roads, gauging hut, river staff gauge",
+      "right-abutment viewing plaza, link ramp, visitor building"
+    ],
+    "status": "illustrative; not surveyed; no operating or electrical meaning"
+  }
+}
