@@ -1,0 +1,2602 @@
+{
+  "model_version": "twin-ai-v2 deep (2026-10-19)",
+  "selected": {
+    "lstm/base": {
+      "config": {
+        "hidden": 64,
+        "layers": 1
+      },
+      "epochs": 10,
+      "june_MAE_h3": 20.44164276123047,
+      "june_MAE_h1": 20.89978790283203,
+      "june_MAE_h6": 25.05097770690918
+    },
+    "transformer/base": {
+      "config": {
+        "d_model": 64,
+        "layers": 1,
+        "heads": 4
+      },
+      "epochs": 24,
+      "june_MAE_h3": 21.42095947265625,
+      "june_MAE_h1": 22.95230484008789,
+      "june_MAE_h6": 26.46529769897461
+    },
+    "lstm/state": {
+      "config": {
+        "hidden": 32,
+        "layers": 2
+      },
+      "epochs": 18,
+      "june_MAE_h3": 21.11402130126953,
+      "june_MAE_h1": 23.123336791992188,
+      "june_MAE_h6": 27.116010665893555
+    },
+    "transformer/state": {
+      "config": {
+        "d_model": 64,
+        "layers": 1,
+        "heads": 4
+      },
+      "epochs": 29,
+      "june_MAE_h3": 24.95984649658203,
+      "june_MAE_h1": 29.21255111694336,
+      "june_MAE_h6": 31.80902099609375
+    }
+  },
+  "winner_by_june": "lstm",
+  "conditions": {
+    "lstm/base": {
+      "monthly": {
+        "7": {
+          "h1": {
+            "n": 738,
+            "MAE": 62.77267834987486,
+            "RMSE": 131.47128602968175,
+            "bias_mean_pred_minus_actual": -42.37150868266449,
+            "seed_MAE": [
+              75.65210894536585,
+              65.45627324128603,
+              55.815567476536195
+            ],
+            "MAE_persistence_same_samples": 73.81699864498646,
+            "MAE_mean6_same_samples": 59.42945989159891,
+            "MAE_ridge_same_samples": 58.541844444444436,
+            "MAE_hgb_same_samples": 98.52120338753386,
+            "MAE_improvement_vs_persistence_pct": 14.961757451326168,
+            "MAE_improvement_vs_ridge_pct": -7.227025293754516
+          },
+          "h3": {
+            "n": 738,
+            "MAE": 55.97649545148523,
+            "RMSE": 115.53323099231025,
+            "bias_mean_pred_minus_actual": -31.43398079248237,
+            "seed_MAE": [
+              63.667956075425394,
+              55.2433526030233,
+              54.21710352759116
+            ],
+            "MAE_persistence_same_samples": 60.33733739837399,
+            "MAE_mean6_same_samples": 65.89081788617887,
+            "MAE_ridge_same_samples": 58.50068807588076,
+            "MAE_hgb_same_samples": 97.0009861788618,
+            "MAE_improvement_vs_persistence_pct": 7.22743517516615,
+            "MAE_improvement_vs_ridge_pct": 4.314808436306634
+          },
+          "h6": {
+            "n": 738,
+            "MAE": 72.64694825710514,
+            "RMSE": 165.1907750824368,
+            "bias_mean_pred_minus_actual": -49.117176604118455,
+            "seed_MAE": [
+              85.87611104802905,
+              71.60489083507713,
+              69.2426288024985
+            ],
+            "MAE_persistence_same_samples": 87.67255284552846,
+            "MAE_mean6_same_samples": 82.68005555555555,
+            "MAE_ridge_same_samples": 75.71836246612467,
+            "MAE_hgb_same_samples": 106.92511761517615,
+            "MAE_improvement_vs_persistence_pct": 17.13832220090266,
+            "MAE_improvement_vs_ridge_pct": 4.056366393810542
+          },
+          "h12": {
+            "n": 720,
+            "MAE": 90.86560481561024,
+            "RMSE": 205.22397216366207,
+            "bias_mean_pred_minus_actual": -63.2957364262263,
+            "seed_MAE": [
+              92.88678027280172,
+              92.67784753432805,
+              90.33533667818706
+            ],
+            "MAE_persistence_same_samples": 117.4341138888889,
+            "MAE_improvement_vs_persistence_pct": 22.624183206607782
+          },
+          "h24": {
+            "n": 720,
+            "MAE": 120.7576122373581,
+            "RMSE": 245.35459529955378,
+            "bias_mean_pred_minus_actual": -92.59957503999075,
+            "seed_MAE": [
+              123.49352783777447,
+              120.35457394608392,
+              120.53185235532126
+            ],
+            "MAE_persistence_same_samples": 151.96841388888888,
+            "MAE_improvement_vs_persistence_pct": 20.537689940194042
+          }
+        },
+        "8": {
+          "h1": {
+            "n": 738,
+            "MAE": 33.874276570276194,
+            "RMSE": 61.7363091717028,
+            "bias_mean_pred_minus_actual": -14.210531683686627,
+            "seed_MAE": [
+              33.701440529907295,
+              34.2082226513201,
+              34.3638956211731
+            ],
+            "MAE_persistence_same_samples": 72.73696612466125,
+            "MAE_mean6_same_samples": 46.97863075880759,
+            "MAE_ridge_same_samples": 35.91989620596206,
+            "MAE_hgb_same_samples": 33.16591436314363,
+            "MAE_improvement_vs_persistence_pct": 53.429076884757194,
+            "MAE_improvement_vs_ridge_pct": 5.694948626678745
+          },
+          "h3": {
+            "n": 738,
+            "MAE": 30.808781819657582,
+            "RMSE": 56.70649006032539,
+            "bias_mean_pred_minus_actual": -9.563995293126197,
+            "seed_MAE": [
+              31.005224006433796,
+              30.838016484251515,
+              31.28182855591848
+            ],
+            "MAE_persistence_same_samples": 42.72142276422765,
+            "MAE_mean6_same_samples": 42.09500989159891,
+            "MAE_ridge_same_samples": 34.600409891598915,
+            "MAE_hgb_same_samples": 34.57758563685637,
+            "MAE_improvement_vs_persistence_pct": 27.884466793893846,
+            "MAE_improvement_vs_ridge_pct": 10.958332816924088
+          },
+          "h6": {
+            "n": 738,
+            "MAE": 35.75444522350332,
+            "RMSE": 60.88940132679087,
+            "bias_mean_pred_minus_actual": -12.949478954948383,
+            "seed_MAE": [
+              36.13049840274283,
+              35.40140442227155,
+              36.34203314751467
+            ],
+            "MAE_persistence_same_samples": 61.47213414634147,
+            "MAE_mean6_same_samples": 45.015041869918704,
+            "MAE_ridge_same_samples": 41.918958807588076,
+            "MAE_hgb_same_samples": 41.00931327913279,
+            "MAE_improvement_vs_persistence_pct": 41.83633654496889,
+            "MAE_improvement_vs_ridge_pct": 14.705788882735495
+          },
+          "h12": {
+            "n": 720,
+            "MAE": 40.25068468446731,
+            "RMSE": 66.85498621043274,
+            "bias_mean_pred_minus_actual": -16.019128607394958,
+            "seed_MAE": [
+              39.79830479662286,
+              40.934578829103046,
+              40.45173756921291
+            ],
+            "MAE_persistence_same_samples": 75.10255416666668,
+            "MAE_improvement_vs_persistence_pct": 46.40570466465964
+          },
+          "h24": {
+            "n": 720,
+            "MAE": 40.531607485389706,
+            "RMSE": 67.03266746372474,
+            "bias_mean_pred_minus_actual": -15.831456635199652,
+            "seed_MAE": [
+              40.344566815159055,
+              40.16109709691471,
+              41.23405233080651
+            ],
+            "MAE_persistence_same_samples": 45.89854027777778,
+            "MAE_improvement_vs_persistence_pct": 11.69303590028662
+          }
+        },
+        "9": {
+          "h1": {
+            "n": 714,
+            "MAE": 42.14940611152154,
+            "RMSE": 74.93918193496806,
+            "bias_mean_pred_minus_actual": -15.36271681397235,
+            "seed_MAE": [
+              42.090146924457294,
+              43.83681122188542,
+              45.007294351412135
+            ],
+            "MAE_persistence_same_samples": 76.96093837535014,
+            "MAE_mean6_same_samples": 58.16702450980392,
+            "MAE_ridge_same_samples": 46.99765672268907,
+            "MAE_hgb_same_samples": 50.92853851540617,
+            "MAE_improvement_vs_persistence_pct": 45.23272844471761,
+            "MAE_improvement_vs_ridge_pct": 10.315941153778711
+          },
+          "h3": {
+            "n": 714,
+            "MAE": 46.16246411298703,
+            "RMSE": 88.88809701950701,
+            "bias_mean_pred_minus_actual": -13.51480530137642,
+            "seed_MAE": [
+              45.92162652404502,
+              46.820215008747006,
+              47.330087054843496
+            ],
+            "MAE_persistence_same_samples": 57.136172268907565,
+            "MAE_mean6_same_samples": 62.128309103641456,
+            "MAE_ridge_same_samples": 50.05893949579831,
+            "MAE_hgb_same_samples": 55.93890784313725,
+            "MAE_improvement_vs_persistence_pct": 19.206236120042327,
+            "MAE_improvement_vs_ridge_pct": 7.7837753297557
+          },
+          "h6": {
+            "n": 714,
+            "MAE": 57.19391363079274,
+            "RMSE": 125.0169805626933,
+            "bias_mean_pred_minus_actual": -28.17117603895043,
+            "seed_MAE": [
+              56.88682553895849,
+              58.8014234391354,
+              59.42882263898849
+            ],
+            "MAE_persistence_same_samples": 80.80508403361345,
+            "MAE_mean6_same_samples": 74.76197577030813,
+            "MAE_ridge_same_samples": 64.86234285714286,
+            "MAE_hgb_same_samples": 70.82961946778711,
+            "MAE_improvement_vs_persistence_pct": 29.219906996197036,
+            "MAE_improvement_vs_ridge_pct": 11.822621398736057
+          },
+          "h12": {
+            "n": 696,
+            "MAE": 73.70541793825433,
+            "RMSE": 179.75011655181865,
+            "bias_mean_pred_minus_actual": -42.70391835816154,
+            "seed_MAE": [
+              73.81996411944532,
+              74.4077884068078,
+              75.83819572951055
+            ],
+            "MAE_persistence_same_samples": 108.37660344827586,
+            "MAE_improvement_vs_persistence_pct": 31.991393351396923
+          },
+          "h24": {
+            "n": 696,
+            "MAE": 89.73350023559043,
+            "RMSE": 240.11578872424596,
+            "bias_mean_pred_minus_actual": -56.26619791133923,
+            "seed_MAE": [
+              90.20239551592421,
+              89.60063354526169,
+              90.67594966082187
+            ],
+            "MAE_persistence_same_samples": 124.86422701149424,
+            "MAE_improvement_vs_persistence_pct": 28.13514135851727
+          }
+        },
+        "10": {
+          "h1": {
+            "n": 738,
+            "MAE": 36.26834708704082,
+            "RMSE": 55.71874443457762,
+            "bias_mean_pred_minus_actual": -12.631339587608329,
+            "seed_MAE": [
+              36.18174376622254,
+              36.03713768328528,
+              37.66939844958714
+            ],
+            "MAE_persistence_same_samples": 70.5569674796748,
+            "MAE_mean6_same_samples": 47.01278048780488,
+            "MAE_ridge_same_samples": 37.9991527100271,
+            "MAE_hgb_same_samples": 35.60428468834688,
+            "MAE_improvement_vs_persistence_pct": 48.59707214955267,
+            "MAE_improvement_vs_ridge_pct": 4.554853199475563
+          },
+          "h3": {
+            "n": 738,
+            "MAE": 34.04075689652425,
+            "RMSE": 51.81232257433618,
+            "bias_mean_pred_minus_actual": -8.989610887931937,
+            "seed_MAE": [
+              34.235680869639395,
+              34.35838397147727,
+              34.26319549152586
+            ],
+            "MAE_persistence_same_samples": 46.289584010840116,
+            "MAE_mean6_same_samples": 44.38629241192412,
+            "MAE_ridge_same_samples": 37.3466674796748,
+            "MAE_hgb_same_samples": 36.6881985094851,
+            "MAE_improvement_vs_persistence_pct": 26.461303068628634,
+            "MAE_improvement_vs_ridge_pct": 8.85195602780282
+          },
+          "h6": {
+            "n": 738,
+            "MAE": 39.21190923945109,
+            "RMSE": 58.09011785678035,
+            "bias_mean_pred_minus_actual": -12.643720833742199,
+            "seed_MAE": [
+              39.80418290539485,
+              39.13361016427404,
+              39.943155858460486
+            ],
+            "MAE_persistence_same_samples": 66.28859349593496,
+            "MAE_mean6_same_samples": 48.99628644986449,
+            "MAE_ridge_same_samples": 46.65252994579946,
+            "MAE_hgb_same_samples": 43.20613157181572,
+            "MAE_improvement_vs_persistence_pct": 40.84667184580452,
+            "MAE_improvement_vs_ridge_pct": 15.949018659851511
+          },
+          "h12": {
+            "n": 720,
+            "MAE": 42.61984973616335,
+            "RMSE": 66.9320125096985,
+            "bias_mean_pred_minus_actual": -14.316995071201857,
+            "seed_MAE": [
+              43.17257570433352,
+              42.89852554571363,
+              42.925664537545046
+            ],
+            "MAE_persistence_same_samples": 70.07421805555556,
+            "MAE_improvement_vs_persistence_pct": 39.17898633934966
+          },
+          "h24": {
+            "n": 720,
+            "MAE": 51.615617783090805,
+            "RMSE": 79.82568773444467,
+            "bias_mean_pred_minus_actual": -19.433727665636276,
+            "seed_MAE": [
+              51.66814737144576,
+              51.538895262421505,
+              51.98021599501505
+            ],
+            "MAE_persistence_same_samples": 65.66049583333333,
+            "MAE_improvement_vs_persistence_pct": 21.390149239647492
+          }
+        },
+        "11": {
+          "h1": {
+            "n": 714,
+            "MAE": 24.106192823240068,
+            "RMSE": 35.22705064573451,
+            "bias_mean_pred_minus_actual": -10.375187737244184,
+            "seed_MAE": [
+              24.77580628475054,
+              24.150584861959565,
+              24.336256694131954
+            ],
+            "MAE_persistence_same_samples": 48.12626610644257,
+            "MAE_mean6_same_samples": 32.27847394957983,
+            "MAE_ridge_same_samples": 28.669528431372544,
+            "MAE_hgb_same_samples": 24.694307843137256,
+            "MAE_improvement_vs_persistence_pct": 49.91052750711317,
+            "MAE_improvement_vs_ridge_pct": 15.91702360593731
+          },
+          "h3": {
+            "n": 714,
+            "MAE": 24.531491678382334,
+            "RMSE": 34.64014230314252,
+            "bias_mean_pred_minus_actual": -7.572889178494278,
+            "seed_MAE": [
+              25.31378219500944,
+              24.88650922341991,
+              24.113916853488075
+            ],
+            "MAE_persistence_same_samples": 31.607511204481792,
+            "MAE_mean6_same_samples": 29.683034173669466,
+            "MAE_ridge_same_samples": 27.345150700280115,
+            "MAE_hgb_same_samples": 25.421731512605046,
+            "MAE_improvement_vs_persistence_pct": 22.38714551209623,
+            "MAE_improvement_vs_ridge_pct": 10.289425912247609
+          },
+          "h6": {
+            "n": 714,
+            "MAE": 26.699549461885663,
+            "RMSE": 38.0860707880089,
+            "bias_mean_pred_minus_actual": -11.195393098946045,
+            "seed_MAE": [
+              27.59658522062409,
+              26.80651237941189,
+              26.730500994417845
+            ],
+            "MAE_persistence_same_samples": 41.364425770308124,
+            "MAE_mean6_same_samples": 30.881133333333327,
+            "MAE_ridge_same_samples": 32.09801484593837,
+            "MAE_hgb_same_samples": 28.10346330532213,
+            "MAE_improvement_vs_persistence_pct": 35.452870516938454,
+            "MAE_improvement_vs_ridge_pct": 16.818689286436733
+          },
+          "h12": {
+            "n": 696,
+            "MAE": 27.72621262708752,
+            "RMSE": 39.158187468918854,
+            "bias_mean_pred_minus_actual": -10.743549488401962,
+            "seed_MAE": [
+              28.209270985627995,
+              28.031739504752487,
+              27.676945158223997
+            ],
+            "MAE_persistence_same_samples": 43.10547557471264,
+            "MAE_improvement_vs_persistence_pct": 35.67821197325381
+          },
+          "h24": {
+            "n": 696,
+            "MAE": 27.164238813126225,
+            "RMSE": 37.85017262208899,
+            "bias_mean_pred_minus_actual": -9.97772359246221,
+            "seed_MAE": [
+              27.45299271163995,
+              27.29603183800325,
+              26.98094824408937
+            ],
+            "MAE_persistence_same_samples": 34.287182471264366,
+            "MAE_improvement_vs_persistence_pct": 20.77436273484351
+          }
+        },
+        "12": {
+          "h1": {
+            "n": 738,
+            "MAE": 22.54819632323494,
+            "RMSE": 36.175631853206795,
+            "bias_mean_pred_minus_actual": -10.486903531421733,
+            "seed_MAE": [
+              23.14490076750449,
+              22.66403063485325,
+              22.6319572001397
+            ],
+            "MAE_persistence_same_samples": 53.00702574525745,
+            "MAE_mean6_same_samples": 34.723579674796746,
+            "MAE_ridge_same_samples": 28.236836585365854,
+            "MAE_hgb_same_samples": 25.520662330623306,
+            "MAE_improvement_vs_persistence_pct": 57.461872258976285,
+            "MAE_improvement_vs_ridge_pct": 20.146167028778052
+          },
+          "h3": {
+            "n": 738,
+            "MAE": 23.130156785825566,
+            "RMSE": 35.83153658547704,
+            "bias_mean_pred_minus_actual": -8.631009705630582,
+            "seed_MAE": [
+              23.219360469988686,
+              23.54493323265795,
+              23.04858327020988
+            ],
+            "MAE_persistence_same_samples": 32.54626558265583,
+            "MAE_mean6_same_samples": 31.82224796747968,
+            "MAE_ridge_same_samples": 27.31444620596206,
+            "MAE_hgb_same_samples": 26.202476016260167,
+            "MAE_improvement_vs_persistence_pct": 28.93145689147262,
+            "MAE_improvement_vs_ridge_pct": 15.318961214096182
+          },
+          "h6": {
+            "n": 738,
+            "MAE": 25.806112775750922,
+            "RMSE": 40.36568684663698,
+            "bias_mean_pred_minus_actual": -10.977035279545357,
+            "seed_MAE": [
+              26.02565055568528,
+              26.28863008926619,
+              26.026221723075164
+            ],
+            "MAE_persistence_same_samples": 45.56564092140921,
+            "MAE_mean6_same_samples": 34.41229024390244,
+            "MAE_ridge_same_samples": 33.77618672086721,
+            "MAE_hgb_same_samples": 29.84416639566395,
+            "MAE_improvement_vs_persistence_pct": 43.36497357677721,
+            "MAE_improvement_vs_ridge_pct": 23.59672514538863
+          },
+          "h12": {
+            "n": 720,
+            "MAE": 27.525669145431785,
+            "RMSE": 42.67727622284706,
+            "bias_mean_pred_minus_actual": -13.13876119475497,
+            "seed_MAE": [
+              27.56841514842775,
+              27.99480379324754,
+              27.559668609401914
+            ],
+            "MAE_persistence_same_samples": 49.92681944444444,
+            "MAE_improvement_vs_persistence_pct": 44.86796985724137
+          },
+          "h24": {
+            "n": 720,
+            "MAE": 29.26416697257095,
+            "RMSE": 43.06958359095458,
+            "bias_mean_pred_minus_actual": -12.237524056887626,
+            "seed_MAE": [
+              29.114005885148053,
+              29.706099869542655,
+              29.331407736542488
+            ],
+            "MAE_persistence_same_samples": 34.15128333333333,
+            "MAE_improvement_vs_persistence_pct": 14.31019828175041
+          }
+        }
+      },
+      "periods": {
+        "주평가_7-9월": {
+          "h1": {
+            "n": 2190,
+            "MAE": 46.31056104780724,
+            "RMSE": 94.55166828306184,
+            "bias_mean_pred_minus_actual": -24.076039084723007,
+            "seed_MAE": [
+              50.57318923142196,
+              47.877571315602516,
+              45.06285476393504
+            ],
+            "MAE_persistence_same_samples": 74.47805296803652,
+            "MAE_mean6_same_samples": 54.822112511415526,
+            "MAE_ridge_same_samples": 47.15483630136987,
+            "MAE_hgb_same_samples": 60.98085360730594,
+            "MAE_improvement_vs_persistence_pct": 37.81985537715094,
+            "MAE_improvement_vs_ridge_pct": 1.7904319467186907
+          },
+          "h3": {
+            "n": 2190,
+            "MAE": 44.29567762683842,
+            "RMSE": 90.31978558815165,
+            "bias_mean_pred_minus_actual": -18.22195312162643,
+            "seed_MAE": [
+              46.87527316830147,
+              44.272915024043,
+              44.24287398848784
+            ],
+            "MAE_persistence_same_samples": 53.35734794520548,
+            "MAE_mean6_same_samples": 56.645275616438354,
+            "MAE_ridge_same_samples": 47.6943804109589,
+            "MAE_hgb_same_samples": 62.57779278538812,
+            "MAE_improvement_vs_persistence_pct": 16.982984850882787,
+            "MAE_improvement_vs_ridge_pct": 7.126002591574811
+          },
+          "h6": {
+            "n": 2190,
+            "MAE": 55.17656745254568,
+            "RMSE": 124.66204291102555,
+            "bias_mean_pred_minus_actual": -30.10018789698718,
+            "seed_MAE": [
+              59.66121973035891,
+              55.23053070112603,
+              54.956009079154114
+            ],
+            "MAE_persistence_same_samples": 76.60438767123287,
+            "MAE_mean6_same_samples": 67.40595095890411,
+            "MAE_ridge_same_samples": 60.78906662100457,
+            "MAE_hgb_same_samples": 72.94427319634703,
+            "MAE_improvement_vs_persistence_pct": 27.97205339027068,
+            "MAE_improvement_vs_ridge_pct": 9.232744439802914
+          },
+          "h12": {
+            "n": 2136,
+            "MAE": 68.21287421586183,
+            "RMSE": 161.9608450936241,
+            "bias_mean_pred_minus_actual": -40.65010767859913,
+            "seed_MAE": [
+              68.77900574771519,
+              69.28313095168943,
+              68.79685284918882
+            ],
+            "MAE_persistence_same_samples": 100.21372518726592,
+            "MAE_improvement_vs_persistence_pct": 31.932602955937632
+          },
+          "h24": {
+            "n": 2136,
+            "MAE": 83.60615841027591,
+            "RMSE": 201.47712519956536,
+            "bias_mean_pred_minus_actual": -54.88371561443314,
+            "seed_MAE": [
+              84.6181158376383,
+              83.30211802362413,
+              84.07392899716481
+            ],
+            "MAE_persistence_same_samples": 107.38282256554307,
+            "MAE_improvement_vs_persistence_pct": 22.14196236158221
+          }
+        },
+        "보조평가_10-12월": {
+          "h1": {
+            "n": 2190,
+            "MAE": 27.679648727204075,
+            "RMSE": 43.49469530218242,
+            "bias_mean_pred_minus_actual": -11.173126696911657,
+            "seed_MAE": [
+              28.06985815214723,
+              27.655241922477337,
+              28.2550172370359
+            ],
+            "MAE_persistence_same_samples": 57.32985433789954,
+            "MAE_mean6_same_samples": 38.06770054794521,
+            "MAE_ridge_same_samples": 31.667672785388127,
+            "MAE_hgb_same_samples": 28.649290730593606,
+            "MAE_improvement_vs_persistence_pct": 51.718613195733084,
+            "MAE_improvement_vs_ridge_pct": 12.593360065360338
+          },
+          "h3": {
+            "n": 2190,
+            "MAE": 27.26375313056582,
+            "RMSE": 41.57541215880636,
+            "bias_mean_pred_minus_actual": -8.406877110271257,
+            "seed_MAE": [
+              27.614548399946244,
+              27.626308530672883,
+              27.175081899338565
+            ],
+            "MAE_persistence_same_samples": 36.87151598173516,
+            "MAE_mean6_same_samples": 35.358716529680365,
+            "MAE_ridge_same_samples": 30.705177853881278,
+            "MAE_hgb_same_samples": 29.481476757990865,
+            "MAE_improvement_vs_persistence_pct": 26.057412057395965,
+            "MAE_improvement_vs_ridge_pct": 11.207962187004382
+          },
+          "h6": {
+            "n": 2190,
+            "MAE": 30.614967380367787,
+            "RMSE": 46.466630042731,
+            "bias_mean_pred_minus_actual": -11.609876111531365,
+            "seed_MAE": [
+              31.18099495059486,
+              30.786056231056058,
+              30.945652221546872
+            ],
+            "MAE_persistence_same_samples": 51.17928082191781,
+            "MAE_mean6_same_samples": 38.175643287671235,
+            "MAE_ridge_same_samples": 37.56820799086758,
+            "MAE_hgb_same_samples": 33.779448721461186,
+            "MAE_improvement_vs_persistence_pct": 40.180934767538275,
+            "MAE_improvement_vs_ridge_pct": 18.508310569910726
+          },
+          "h12": {
+            "n": 2136,
+            "MAE": 32.67894081610552,
+            "RMSE": 51.221579882279244,
+            "bias_mean_pred_minus_actual": -12.755456439801815,
+            "seed_MAE": [
+              33.03706274343877,
+              33.03056545850177,
+              32.777431505583195
+            ],
+            "MAE_persistence_same_samples": 54.49539232209737,
+            "MAE_improvement_vs_persistence_pct": 40.03357086970724
+          },
+          "h24": {
+            "n": 2136,
+            "MAE": 36.11411762079228,
+            "RMSE": 56.92102897750857,
+            "bias_mean_pred_minus_actual": -13.926871189405855,
+            "seed_MAE": [
+              36.175296475678344,
+              36.28016603664066,
+              36.19995742725076
+            ],
+            "MAE_persistence_same_samples": 44.816647940074915,
+            "MAE_improvement_vs_persistence_pct": 19.41807502185111
+          }
+        }
+      }
+    },
+    "lstm/state": {
+      "monthly": {
+        "7": {
+          "h1": {
+            "n": 738,
+            "MAE": 84.71065489177006,
+            "RMSE": 149.99597735747352,
+            "bias_mean_pred_minus_actual": -68.83444316779888,
+            "seed_MAE": [
+              88.80859562117828,
+              112.44643301114931,
+              70.3154621548614
+            ],
+            "MAE_persistence_same_samples": 73.81699864498646,
+            "MAE_mean6_same_samples": 59.42945989159891,
+            "MAE_ridge_same_samples": 58.541844444444436,
+            "MAE_hgb_same_samples": 98.52120338753386,
+            "MAE_improvement_vs_persistence_pct": -14.757652636590215,
+            "MAE_improvement_vs_ridge_pct": -44.70103512396084
+          },
+          "h3": {
+            "n": 738,
+            "MAE": 64.27898587945612,
+            "RMSE": 116.71191453690233,
+            "bias_mean_pred_minus_actual": -45.80831711947692,
+            "seed_MAE": [
+              66.80307788296057,
+              74.05634878122127,
+              58.641209760645225
+            ],
+            "MAE_persistence_same_samples": 60.33733739837399,
+            "MAE_mean6_same_samples": 65.89081788617887,
+            "MAE_ridge_same_samples": 58.50068807588076,
+            "MAE_hgb_same_samples": 97.0009861788618,
+            "MAE_improvement_vs_persistence_pct": -6.53268548304942,
+            "MAE_improvement_vs_ridge_pct": -9.877315966062438
+          },
+          "h6": {
+            "n": 738,
+            "MAE": 88.74454793739837,
+            "RMSE": 173.9761777039968,
+            "bias_mean_pred_minus_actual": -69.452888925847,
+            "seed_MAE": [
+              92.75795957852249,
+              104.89566349492165,
+              79.55456674963995
+            ],
+            "MAE_persistence_same_samples": 87.67255284552846,
+            "MAE_mean6_same_samples": 82.68005555555555,
+            "MAE_ridge_same_samples": 75.71836246612467,
+            "MAE_hgb_same_samples": 106.92511761517615,
+            "MAE_improvement_vs_persistence_pct": -1.2227259924308034,
+            "MAE_improvement_vs_ridge_pct": -17.203469603692795
+          },
+          "h12": {
+            "n": 720,
+            "MAE": 104.67271302652358,
+            "RMSE": 217.35902586346327,
+            "bias_mean_pred_minus_actual": -88.85436515753004,
+            "seed_MAE": [
+              111.0549096971684,
+              115.0306179221736,
+              94.15006400674184
+            ],
+            "MAE_persistence_same_samples": 117.4341138888889,
+            "MAE_improvement_vs_persistence_pct": 10.866860096921759
+          },
+          "h24": {
+            "n": 720,
+            "MAE": 131.25648930807114,
+            "RMSE": 255.5340947527431,
+            "bias_mean_pred_minus_actual": -110.49767145704693,
+            "seed_MAE": [
+              134.47065812426672,
+              136.17823828789395,
+              125.70030096831852
+            ],
+            "MAE_persistence_same_samples": 151.96841388888888,
+            "MAE_improvement_vs_persistence_pct": 13.62909834405535
+          }
+        },
+        "8": {
+          "h1": {
+            "n": 738,
+            "MAE": 36.68945630159255,
+            "RMSE": 66.45314414660565,
+            "bias_mean_pred_minus_actual": -21.38448442976294,
+            "seed_MAE": [
+              44.24736662007154,
+              33.60560472922235,
+              37.16641469989051
+            ],
+            "MAE_persistence_same_samples": 72.73696612466125,
+            "MAE_mean6_same_samples": 46.97863075880759,
+            "MAE_ridge_same_samples": 35.91989620596206,
+            "MAE_hgb_same_samples": 33.16591436314363,
+            "MAE_improvement_vs_persistence_pct": 49.55872061159133,
+            "MAE_improvement_vs_ridge_pct": -2.1424340739123724
+          },
+          "h3": {
+            "n": 738,
+            "MAE": 31.399322486256036,
+            "RMSE": 58.281706816638795,
+            "bias_mean_pred_minus_actual": -15.068989365832755,
+            "seed_MAE": [
+              32.6957069418315,
+              30.7079313282734,
+              32.132785298544455
+            ],
+            "MAE_persistence_same_samples": 42.72142276422765,
+            "MAE_mean6_same_samples": 42.09500989159891,
+            "MAE_ridge_same_samples": 34.600409891598915,
+            "MAE_hgb_same_samples": 34.57758563685637,
+            "MAE_improvement_vs_persistence_pct": 26.502161083109005,
+            "MAE_improvement_vs_ridge_pct": 9.251588103642993
+          },
+          "h6": {
+            "n": 738,
+            "MAE": 37.44307427970504,
+            "RMSE": 63.9770816491292,
+            "bias_mean_pred_minus_actual": -17.813659740802073,
+            "seed_MAE": [
+              41.37342404739159,
+              36.09700725276037,
+              39.04138044192409
+            ],
+            "MAE_persistence_same_samples": 61.47213414634147,
+            "MAE_mean6_same_samples": 45.015041869918704,
+            "MAE_ridge_same_samples": 41.918958807588076,
+            "MAE_hgb_same_samples": 41.00931327913279,
+            "MAE_improvement_vs_persistence_pct": 39.08935357512153,
+            "MAE_improvement_vs_ridge_pct": 10.677470660537553
+          },
+          "h12": {
+            "n": 720,
+            "MAE": 43.42689902849462,
+            "RMSE": 71.21164896219773,
+            "bias_mean_pred_minus_actual": -18.672501216679144,
+            "seed_MAE": [
+              50.984088958785264,
+              39.5889589292672,
+              42.12361250793669
+            ],
+            "MAE_persistence_same_samples": 75.10255416666668,
+            "MAE_improvement_vs_persistence_pct": 42.17653512539378
+          },
+          "h24": {
+            "n": 720,
+            "MAE": 41.156408611480394,
+            "RMSE": 68.15295523236618,
+            "bias_mean_pred_minus_actual": -14.274704843232366,
+            "seed_MAE": [
+              42.090149425367514,
+              42.9297569615523,
+              40.22604646152391
+            ],
+            "MAE_persistence_same_samples": 45.89854027777778,
+            "MAE_improvement_vs_persistence_pct": 10.331770112073327
+          }
+        },
+        "9": {
+          "h1": {
+            "n": 714,
+            "MAE": 44.44449905073342,
+            "RMSE": 82.3380266159628,
+            "bias_mean_pred_minus_actual": -20.123906888554412,
+            "seed_MAE": [
+              42.45156548985813,
+              44.997991615389246,
+              52.0530028325119
+            ],
+            "MAE_persistence_same_samples": 76.96093837535014,
+            "MAE_mean6_same_samples": 58.16702450980392,
+            "MAE_ridge_same_samples": 46.99765672268907,
+            "MAE_hgb_same_samples": 50.92853851540617,
+            "MAE_improvement_vs_persistence_pct": 42.25057543611166,
+            "MAE_improvement_vs_ridge_pct": 5.432521214878069
+          },
+          "h3": {
+            "n": 714,
+            "MAE": 48.4950417539439,
+            "RMSE": 97.18616835050037,
+            "bias_mean_pred_minus_actual": -20.731871104018698,
+            "seed_MAE": [
+              49.699323981255716,
+              48.20907805499617,
+              49.32919892182671
+            ],
+            "MAE_persistence_same_samples": 57.136172268907565,
+            "MAE_mean6_same_samples": 62.128309103641456,
+            "MAE_ridge_same_samples": 50.05893949579831,
+            "MAE_hgb_same_samples": 55.93890784313725,
+            "MAE_improvement_vs_persistence_pct": 15.123747657254254,
+            "MAE_improvement_vs_ridge_pct": 3.1241128110308387
+          },
+          "h6": {
+            "n": 714,
+            "MAE": 59.26366207819092,
+            "RMSE": 131.77628533780782,
+            "bias_mean_pred_minus_actual": -31.937276036044793,
+            "seed_MAE": [
+              58.88898497098366,
+              60.584673642557874,
+              59.61196658754749
+            ],
+            "MAE_persistence_same_samples": 80.80508403361345,
+            "MAE_mean6_same_samples": 74.76197577030813,
+            "MAE_ridge_same_samples": 64.86234285714286,
+            "MAE_hgb_same_samples": 70.82961946778711,
+            "MAE_improvement_vs_persistence_pct": 26.65849830248514,
+            "MAE_improvement_vs_ridge_pct": 8.631635140412445
+          },
+          "h12": {
+            "n": 696,
+            "MAE": 73.75019883031405,
+            "RMSE": 178.19387451991992,
+            "bias_mean_pred_minus_actual": -42.24557608344637,
+            "seed_MAE": [
+              74.93324458257632,
+              76.04924124965311,
+              72.63642743672037
+            ],
+            "MAE_persistence_same_samples": 108.37660344827586,
+            "MAE_improvement_vs_persistence_pct": 31.950073647111218
+          },
+          "h24": {
+            "n": 696,
+            "MAE": 89.7710937594737,
+            "RMSE": 236.95738671995858,
+            "bias_mean_pred_minus_actual": -54.703903736796875,
+            "seed_MAE": [
+              93.85844434419171,
+              92.32400930395619,
+              87.86693416998577
+            ],
+            "MAE_persistence_same_samples": 124.86422701149424,
+            "MAE_improvement_vs_persistence_pct": 28.10503383710538
+          }
+        },
+        "10": {
+          "h1": {
+            "n": 738,
+            "MAE": 38.84130173783057,
+            "RMSE": 59.704128202838945,
+            "bias_mean_pred_minus_actual": -19.915057679293927,
+            "seed_MAE": [
+              39.59062735768335,
+              36.36603964898774,
+              43.4932848230287
+            ],
+            "MAE_persistence_same_samples": 70.5569674796748,
+            "MAE_mean6_same_samples": 47.01278048780488,
+            "MAE_ridge_same_samples": 37.9991527100271,
+            "MAE_hgb_same_samples": 35.60428468834688,
+            "MAE_improvement_vs_persistence_pct": 44.95043774518866,
+            "MAE_improvement_vs_ridge_pct": -2.2162310676502237
+          },
+          "h3": {
+            "n": 738,
+            "MAE": 35.33854708186559,
+            "RMSE": 54.37036645915409,
+            "bias_mean_pred_minus_actual": -12.222314446123955,
+            "seed_MAE": [
+              36.8776127235589,
+              34.74969882847494,
+              36.16504605553131
+            ],
+            "MAE_persistence_same_samples": 46.289584010840116,
+            "MAE_mean6_same_samples": 44.38629241192412,
+            "MAE_ridge_same_samples": 37.3466674796748,
+            "MAE_hgb_same_samples": 36.6881985094851,
+            "MAE_improvement_vs_persistence_pct": 23.657669782493628,
+            "MAE_improvement_vs_ridge_pct": 5.376973457945313
+          },
+          "h6": {
+            "n": 738,
+            "MAE": 41.554751755414614,
+            "RMSE": 62.177312936334246,
+            "bias_mean_pred_minus_actual": -18.44618626192398,
+            "seed_MAE": [
+              41.91524166988616,
+              39.98339411173022,
+              45.43321870950761
+            ],
+            "MAE_persistence_same_samples": 66.28859349593496,
+            "MAE_mean6_same_samples": 48.99628644986449,
+            "MAE_ridge_same_samples": 46.65252994579946,
+            "MAE_hgb_same_samples": 43.20613157181572,
+            "MAE_improvement_vs_persistence_pct": 37.312364671060806,
+            "MAE_improvement_vs_ridge_pct": 10.927120557679086
+          },
+          "h12": {
+            "n": 720,
+            "MAE": 44.38998657024437,
+            "RMSE": 69.94226992864454,
+            "bias_mean_pred_minus_actual": -23.296026532016864,
+            "seed_MAE": [
+              44.23212564045556,
+              44.179895607924465,
+              47.42822075671752
+            ],
+            "MAE_persistence_same_samples": 70.07421805555556,
+            "MAE_improvement_vs_persistence_pct": 36.65289773900648
+          },
+          "h24": {
+            "n": 720,
+            "MAE": 51.47903927341567,
+            "RMSE": 80.49699061268393,
+            "bias_mean_pred_minus_actual": -23.664459166818194,
+            "seed_MAE": [
+              51.541305045771594,
+              51.34830892891884,
+              51.89699834711155
+            ],
+            "MAE_persistence_same_samples": 65.66049583333333,
+            "MAE_improvement_vs_persistence_pct": 21.598156364695424
+          }
+        },
+        "11": {
+          "h1": {
+            "n": 714,
+            "MAE": 23.901951851619728,
+            "RMSE": 34.5377434283106,
+            "bias_mean_pred_minus_actual": -7.9549011769434985,
+            "seed_MAE": [
+              24.11725354009917,
+              24.133140064957935,
+              24.47515268551669
+            ],
+            "MAE_persistence_same_samples": 48.12626610644257,
+            "MAE_mean6_same_samples": 32.27847394957983,
+            "MAE_ridge_same_samples": 28.669528431372544,
+            "MAE_hgb_same_samples": 24.694307843137256,
+            "MAE_improvement_vs_persistence_pct": 50.334913166222094,
+            "MAE_improvement_vs_ridge_pct": 16.629420993669864
+          },
+          "h3": {
+            "n": 714,
+            "MAE": 25.30988641404304,
+            "RMSE": 35.3007582334285,
+            "bias_mean_pred_minus_actual": -5.340314926661698,
+            "seed_MAE": [
+              25.763972495613977,
+              25.194551518522726,
+              25.488574028399142
+            ],
+            "MAE_persistence_same_samples": 31.607511204481792,
+            "MAE_mean6_same_samples": 29.683034173669466,
+            "MAE_ridge_same_samples": 27.345150700280115,
+            "MAE_hgb_same_samples": 25.421731512605046,
+            "MAE_improvement_vs_persistence_pct": 19.924456404355496,
+            "MAE_improvement_vs_ridge_pct": 7.442870981201899
+          },
+          "h6": {
+            "n": 714,
+            "MAE": 27.132867574152158,
+            "RMSE": 37.754088149313105,
+            "bias_mean_pred_minus_actual": -7.102997837055964,
+            "seed_MAE": [
+              27.827087159258312,
+              27.72525121643964,
+              27.093036628417277
+            ],
+            "MAE_persistence_same_samples": 41.364425770308124,
+            "MAE_mean6_same_samples": 30.881133333333327,
+            "MAE_ridge_same_samples": 32.09801484593837,
+            "MAE_hgb_same_samples": 28.10346330532213,
+            "MAE_improvement_vs_persistence_pct": 34.405308259764475,
+            "MAE_improvement_vs_ridge_pct": 15.468705138363084
+          },
+          "h12": {
+            "n": 696,
+            "MAE": 27.628811914416566,
+            "RMSE": 38.85316841497555,
+            "bias_mean_pred_minus_actual": -9.26409290611333,
+            "seed_MAE": [
+              27.622797330127366,
+              28.439198384254826,
+              27.591683625435007
+            ],
+            "MAE_persistence_same_samples": 43.10547557471264,
+            "MAE_improvement_vs_persistence_pct": 35.90417099904424
+          },
+          "h24": {
+            "n": 696,
+            "MAE": 27.64633029373761,
+            "RMSE": 37.76764499116326,
+            "bias_mean_pred_minus_actual": -7.602124655531741,
+            "seed_MAE": [
+              28.34224469953844,
+              27.51016521455502,
+              27.50799660984675
+            ],
+            "MAE_persistence_same_samples": 34.287182471264366,
+            "MAE_improvement_vs_persistence_pct": 19.36832279261315
+          }
+        },
+        "12": {
+          "h1": {
+            "n": 738,
+            "MAE": 22.42616059724762,
+            "RMSE": 35.75395655665511,
+            "bias_mean_pred_minus_actual": -9.000614234744559,
+            "seed_MAE": [
+              22.187320316837734,
+              22.72291494311723,
+              23.46741825429964
+            ],
+            "MAE_persistence_same_samples": 53.00702574525745,
+            "MAE_mean6_same_samples": 34.723579674796746,
+            "MAE_ridge_same_samples": 28.236836585365854,
+            "MAE_hgb_same_samples": 25.520662330623306,
+            "MAE_improvement_vs_persistence_pct": 57.69209782676008,
+            "MAE_improvement_vs_ridge_pct": 20.57835328171889
+          },
+          "h3": {
+            "n": 738,
+            "MAE": 23.46767330364063,
+            "RMSE": 35.67310993910936,
+            "bias_mean_pred_minus_actual": -5.678285803356467,
+            "seed_MAE": [
+              23.531695286891967,
+              23.382963138270508,
+              24.419189899990176
+            ],
+            "MAE_persistence_same_samples": 32.54626558265583,
+            "MAE_mean6_same_samples": 31.82224796747968,
+            "MAE_ridge_same_samples": 27.31444620596206,
+            "MAE_hgb_same_samples": 26.202476016260167,
+            "MAE_improvement_vs_persistence_pct": 27.894420808306972,
+            "MAE_improvement_vs_ridge_pct": 14.083290846591558
+          },
+          "h6": {
+            "n": 738,
+            "MAE": 25.915693184184512,
+            "RMSE": 39.891836852779996,
+            "bias_mean_pred_minus_actual": -10.380097112545798,
+            "seed_MAE": [
+              25.960389125764532,
+              26.2118354846378,
+              26.492647332077343
+            ],
+            "MAE_persistence_same_samples": 45.56564092140921,
+            "MAE_mean6_same_samples": 34.41229024390244,
+            "MAE_ridge_same_samples": 33.77618672086721,
+            "MAE_hgb_same_samples": 29.84416639566395,
+            "MAE_improvement_vs_persistence_pct": 43.124484457744316,
+            "MAE_improvement_vs_ridge_pct": 23.272294180640642
+          },
+          "h12": {
+            "n": 720,
+            "MAE": 27.583577238522633,
+            "RMSE": 42.487133565022766,
+            "bias_mean_pred_minus_actual": -13.073681483046213,
+            "seed_MAE": [
+              28.2970306736615,
+              27.673819726724094,
+              27.651596267937293
+            ],
+            "MAE_persistence_same_samples": 49.92681944444444,
+            "MAE_improvement_vs_persistence_pct": 44.751983912742574
+          },
+          "h24": {
+            "n": 720,
+            "MAE": 29.11474872397582,
+            "RMSE": 43.15073204115038,
+            "bias_mean_pred_minus_actual": -13.425756415846612,
+            "seed_MAE": [
+              28.910411617766485,
+              29.184355437641674,
+              29.378374053679572
+            ],
+            "MAE_persistence_same_samples": 34.15128333333333,
+            "MAE_improvement_vs_persistence_pct": 14.747716975079552
+          }
+        }
+      },
+      "periods": {
+        "주평가_7-9월": {
+          "h1": {
+            "n": 2190,
+            "MAE": 55.40029880498871,
+            "RMSE": 106.20848708744798,
+            "bias_mean_pred_minus_actual": -36.96348771024131,
+            "seed_MAE": [
+              58.67840999716944,
+              63.88811409396447,
+              53.19062517863946
+            ],
+            "MAE_persistence_same_samples": 74.47805296803652,
+            "MAE_mean6_same_samples": 54.822112511415526,
+            "MAE_ridge_same_samples": 47.15483630136987,
+            "MAE_hgb_same_samples": 60.98085360730594,
+            "MAE_improvement_vs_persistence_pct": 25.615269737563285,
+            "MAE_improvement_vs_ridge_pct": -17.48593177361811
+          },
+          "h3": {
+            "n": 2190,
+            "MAE": 48.052991500553205,
+            "RMSE": 93.88479815195451,
+            "bias_mean_pred_minus_actual": -27.27397632622278,
+            "seed_MAE": [
+              49.733068732106446,
+              51.02160751236271,
+              46.67226318898002
+            ],
+            "MAE_persistence_same_samples": 53.35734794520548,
+            "MAE_mean6_same_samples": 56.645275616438354,
+            "MAE_ridge_same_samples": 47.6943804109589,
+            "MAE_hgb_same_samples": 62.57779278538812,
+            "MAE_improvement_vs_persistence_pct": 9.9411920736756,
+            "MAE_improvement_vs_ridge_pct": -0.7518938007042562
+          },
+          "h6": {
+            "n": 2190,
+            "MAE": 61.84507758906421,
+            "RMSE": 131.30336466855687,
+            "bias_mean_pred_minus_actual": -39.820058450101826,
+            "seed_MAE": [
+              64.3998613631082,
+              67.2648620970665,
+              59.40034391364529
+            ],
+            "MAE_persistence_same_samples": 76.60438767123287,
+            "MAE_mean6_same_samples": 67.40595095890411,
+            "MAE_ridge_same_samples": 60.78906662100457,
+            "MAE_hgb_same_samples": 72.94427319634703,
+            "MAE_improvement_vs_persistence_pct": 19.266925212576567,
+            "MAE_improvement_vs_ridge_pct": -1.7371725324283112
+          },
+          "h12": {
+            "n": 2136,
+            "MAE": 73.95218121044557,
+            "RMSE": 167.27559184270342,
+            "bias_mean_pred_minus_actual": -50.01042356905866,
+            "seed_MAE": [
+              79.03633766936318,
+              76.89904833464229,
+              69.60299652927243
+            ],
+            "MAE_persistence_same_samples": 100.21372518726592,
+            "MAE_improvement_vs_persistence_pct": 26.205536145619085
+          },
+          "h24": {
+            "n": 2136,
+            "MAE": 87.36796243383465,
+            "RMSE": 204.6260018721377,
+            "bias_mean_pred_minus_actual": -59.88297188062346,
+            "seed_MAE": [
+              90.09796755584931,
+              90.45658569997886,
+              84.56102824522316
+            ],
+            "MAE_persistence_same_samples": 107.38282256554307,
+            "MAE_improvement_vs_persistence_pct": 18.638791245678036
+          }
+        },
+        "보조평가_10-12월": {
+          "h1": {
+            "n": 2190,
+            "MAE": 28.438986678239356,
+            "RMSE": 44.95446755450959,
+            "bias_mean_pred_minus_actual": -12.337701056117837,
+            "seed_MAE": [
+              28.68120749380245,
+              27.78023310290111,
+              30.544409994761295
+            ],
+            "MAE_persistence_same_samples": 57.32985433789954,
+            "MAE_mean6_same_samples": 38.06770054794521,
+            "MAE_ridge_same_samples": 31.667672785388127,
+            "MAE_hgb_same_samples": 28.649290730593606,
+            "MAE_improvement_vs_persistence_pct": 50.39410616566149,
+            "MAE_improvement_vs_ridge_pct": 10.195526930663906
+          },
+          "h3": {
+            "n": 2190,
+            "MAE": 28.068607097776407,
+            "RMSE": 42.7936144721684,
+            "bias_mean_pred_minus_actual": -7.773346046462559,
+            "seed_MAE": [
+              28.756870170584985,
+              27.804024801681905,
+              28.726031046325044
+            ],
+            "MAE_persistence_same_samples": 36.87151598173516,
+            "MAE_mean6_same_samples": 35.358716529680365,
+            "MAE_ridge_same_samples": 30.705177853881278,
+            "MAE_hgb_same_samples": 29.481476757990865,
+            "MAE_improvement_vs_persistence_pct": 23.87455099030753,
+            "MAE_improvement_vs_ridge_pct": 8.586730123016029
+          },
+          "h6": {
+            "n": 2190,
+            "MAE": 31.58267388738301,
+            "RMSE": 47.9976177239126,
+            "bias_mean_pred_minus_actual": -12.029834514162857,
+            "seed_MAE": [
+              31.94555057484047,
+              31.346077082492013,
+              33.0711037860181
+            ],
+            "MAE_persistence_same_samples": 51.17928082191781,
+            "MAE_mean6_same_samples": 38.175643287671235,
+            "MAE_ridge_same_samples": 37.56820799086758,
+            "MAE_hgb_same_samples": 33.779448721461186,
+            "MAE_improvement_vs_persistence_pct": 38.29011783640079,
+            "MAE_improvement_vs_ridge_pct": 15.93244507414244
+          },
+          "h12": {
+            "n": 2136,
+            "MAE": 33.26339842450663,
+            "RMSE": 52.4339950431953,
+            "bias_mean_pred_minus_actual": -15.278089154260435,
+            "seed_MAE": [
+              33.44871698873264,
+              33.48705857508817,
+              34.29835208850854
+            ],
+            "MAE_persistence_same_samples": 54.49539232209737,
+            "MAE_improvement_vs_persistence_pct": 38.96108091505815
+          },
+          "h24": {
+            "n": 2136,
+            "MAE": 36.17480020719253,
+            "RMSE": 57.24165121782598,
+            "bias_mean_pred_minus_actual": -14.97941665719511,
+            "seed_MAE": [
+              36.35366962014334,
+              36.10982833953833,
+              36.35947273830662
+            ],
+            "MAE_persistence_same_samples": 44.816647940074915,
+            "MAE_improvement_vs_persistence_pct": 19.28267313619158
+          }
+        }
+      }
+    },
+    "transformer/base": {
+      "monthly": {
+        "7": {
+          "h1": {
+            "n": 738,
+            "MAE": 72.87053714451363,
+            "RMSE": 147.93968597909566,
+            "bias_mean_pred_minus_actual": -49.42886796458175,
+            "seed_MAE": [
+              80.25708373920057,
+              63.80283151210484,
+              88.56267788590714
+            ],
+            "MAE_persistence_same_samples": 73.81699864498646,
+            "MAE_mean6_same_samples": 59.42945989159891,
+            "MAE_ridge_same_samples": 58.541844444444436,
+            "MAE_hgb_same_samples": 98.52120338753386,
+            "MAE_improvement_vs_persistence_pct": 1.2821728298988542,
+            "MAE_improvement_vs_ridge_pct": -24.475984376725556
+          },
+          "h3": {
+            "n": 738,
+            "MAE": 60.639959154010135,
+            "RMSE": 121.21437799691437,
+            "bias_mean_pred_minus_actual": -36.79156602620691,
+            "seed_MAE": [
+              61.248575099454015,
+              59.11655580727648,
+              66.1576377496952
+            ],
+            "MAE_persistence_same_samples": 60.33733739837399,
+            "MAE_mean6_same_samples": 65.89081788617887,
+            "MAE_ridge_same_samples": 58.50068807588076,
+            "MAE_hgb_same_samples": 97.0009861788618,
+            "MAE_improvement_vs_persistence_pct": -0.5015497346826928,
+            "MAE_improvement_vs_ridge_pct": -3.6568306262561303
+          },
+          "h6": {
+            "n": 738,
+            "MAE": 74.36949897512834,
+            "RMSE": 157.6889277472404,
+            "bias_mean_pred_minus_actual": -44.99465672075846,
+            "seed_MAE": [
+              76.07264063935938,
+              73.45917690529345,
+              81.98857207920105
+            ],
+            "MAE_persistence_same_samples": 87.67255284552846,
+            "MAE_mean6_same_samples": 82.68005555555555,
+            "MAE_ridge_same_samples": 75.71836246612467,
+            "MAE_hgb_same_samples": 106.92511761517615,
+            "MAE_improvement_vs_persistence_pct": 15.173567369298535,
+            "MAE_improvement_vs_ridge_pct": 1.7814218996083007
+          },
+          "h12": {
+            "n": 720,
+            "MAE": 93.85774157990349,
+            "RMSE": 207.53350120042424,
+            "bias_mean_pred_minus_actual": -64.57551934399075,
+            "seed_MAE": [
+              93.99997882486979,
+              93.75277235965729,
+              103.30497109805214
+            ],
+            "MAE_persistence_same_samples": 117.4341138888889,
+            "MAE_improvement_vs_persistence_pct": 20.07625512574
+          },
+          "h24": {
+            "n": 720,
+            "MAE": 121.1077485572603,
+            "RMSE": 245.0718542917804,
+            "bias_mean_pred_minus_actual": -94.7566224017885,
+            "seed_MAE": [
+              120.02294546924168,
+              119.81154788269467,
+              128.9162635785209
+            ],
+            "MAE_persistence_same_samples": 151.96841388888888,
+            "MAE_improvement_vs_persistence_pct": 20.30728922010875
+          }
+        },
+        "8": {
+          "h1": {
+            "n": 738,
+            "MAE": 37.72002935735449,
+            "RMSE": 64.87996954086553,
+            "bias_mean_pred_minus_actual": -14.813810625911083,
+            "seed_MAE": [
+              37.331436159741905,
+              37.71571248733884,
+              39.03099472118603
+            ],
+            "MAE_persistence_same_samples": 72.73696612466125,
+            "MAE_mean6_same_samples": 46.97863075880759,
+            "MAE_ridge_same_samples": 35.91989620596206,
+            "MAE_hgb_same_samples": 33.16591436314363,
+            "MAE_improvement_vs_persistence_pct": 48.14187150353852,
+            "MAE_improvement_vs_ridge_pct": -5.011521027428915
+          },
+          "h3": {
+            "n": 738,
+            "MAE": 36.97324891371068,
+            "RMSE": 61.55142580738237,
+            "bias_mean_pred_minus_actual": -9.32924753989243,
+            "seed_MAE": [
+              35.42440166680147,
+              38.085951441214334,
+              38.475134073624446
+            ],
+            "MAE_persistence_same_samples": 42.72142276422765,
+            "MAE_mean6_same_samples": 42.09500989159891,
+            "MAE_ridge_same_samples": 34.600409891598915,
+            "MAE_hgb_same_samples": 34.57758563685637,
+            "MAE_improvement_vs_persistence_pct": 13.455015021948533,
+            "MAE_improvement_vs_ridge_pct": -6.857835007000581
+          },
+          "h6": {
+            "n": 738,
+            "MAE": 43.81471514466655,
+            "RMSE": 68.19078089392926,
+            "bias_mean_pred_minus_actual": -13.111572769743963,
+            "seed_MAE": [
+              42.750191257125316,
+              44.57631493909572,
+              44.81505465708064
+            ],
+            "MAE_persistence_same_samples": 61.47213414634147,
+            "MAE_mean6_same_samples": 45.015041869918704,
+            "MAE_ridge_same_samples": 41.918958807588076,
+            "MAE_hgb_same_samples": 41.00931327913279,
+            "MAE_improvement_vs_persistence_pct": 28.724265469032527,
+            "MAE_improvement_vs_ridge_pct": -4.522431832766105
+          },
+          "h12": {
+            "n": 720,
+            "MAE": 39.03690741770003,
+            "RMSE": 65.53911188117172,
+            "bias_mean_pred_minus_actual": -13.816012222915225,
+            "seed_MAE": [
+              39.00010018398497,
+              39.80602943900956,
+              39.14088473912345
+            ],
+            "MAE_persistence_same_samples": 75.10255416666668,
+            "MAE_improvement_vs_persistence_pct": 48.02186443477036
+          },
+          "h24": {
+            "n": 720,
+            "MAE": 42.35408739828534,
+            "RMSE": 67.4043417349847,
+            "bias_mean_pred_minus_actual": -11.038346798356374,
+            "seed_MAE": [
+              42.458337919489544,
+              42.8578148490164,
+              42.4706132264932
+            ],
+            "MAE_persistence_same_samples": 45.89854027777778,
+            "MAE_improvement_vs_persistence_pct": 7.722365151574375
+          }
+        },
+        "9": {
+          "h1": {
+            "n": 714,
+            "MAE": 46.44444033235162,
+            "RMSE": 86.09499526647315,
+            "bias_mean_pred_minus_actual": -18.069941442602158,
+            "seed_MAE": [
+              51.59019872300564,
+              51.75548039985316,
+              44.89622691241249
+            ],
+            "MAE_persistence_same_samples": 76.96093837535014,
+            "MAE_mean6_same_samples": 58.16702450980392,
+            "MAE_ridge_same_samples": 46.99765672268907,
+            "MAE_hgb_same_samples": 50.92853851540617,
+            "MAE_improvement_vs_persistence_pct": 39.651930819976414,
+            "MAE_improvement_vs_ridge_pct": 1.1771148370262838
+          },
+          "h3": {
+            "n": 714,
+            "MAE": 50.96700231442064,
+            "RMSE": 94.92171013369047,
+            "bias_mean_pred_minus_actual": -11.962030720622602,
+            "seed_MAE": [
+              52.98189953642132,
+              54.58659894849205,
+              48.76578510670668
+            ],
+            "MAE_persistence_same_samples": 57.136172268907565,
+            "MAE_mean6_same_samples": 62.128309103641456,
+            "MAE_ridge_same_samples": 50.05893949579831,
+            "MAE_hgb_same_samples": 55.93890784313725,
+            "MAE_improvement_vs_persistence_pct": 10.797310546902128,
+            "MAE_improvement_vs_ridge_pct": -1.81398732727557
+          },
+          "h6": {
+            "n": 714,
+            "MAE": 64.98535206485396,
+            "RMSE": 132.88679459943634,
+            "bias_mean_pred_minus_actual": -17.137912678865494,
+            "seed_MAE": [
+              66.50818519689524,
+              76.17990075415389,
+              60.78852609858793
+            ],
+            "MAE_persistence_same_samples": 80.80508403361345,
+            "MAE_mean6_same_samples": 74.76197577030813,
+            "MAE_ridge_same_samples": 64.86234285714286,
+            "MAE_hgb_same_samples": 70.82961946778711,
+            "MAE_improvement_vs_persistence_pct": 19.577644349925773,
+            "MAE_improvement_vs_ridge_pct": -0.18964656886048062
+          },
+          "h12": {
+            "n": 696,
+            "MAE": 89.40456379285627,
+            "RMSE": 215.99143526876625,
+            "bias_mean_pred_minus_actual": -23.508440855034465,
+            "seed_MAE": [
+              79.89057955584855,
+              108.96987139474935,
+              83.70224655090941
+            ],
+            "MAE_persistence_same_samples": 108.37660344827586,
+            "MAE_improvement_vs_persistence_pct": 17.505659941146103
+          },
+          "h24": {
+            "n": 696,
+            "MAE": 105.17274256905742,
+            "RMSE": 262.90946529344757,
+            "bias_mean_pred_minus_actual": -48.88733249531669,
+            "seed_MAE": [
+              95.31851903808528,
+              119.0574609911195,
+              104.07042177911738
+            ],
+            "MAE_persistence_same_samples": 124.86422701149424,
+            "MAE_improvement_vs_persistence_pct": 15.770317018519757
+          }
+        },
+        "10": {
+          "h1": {
+            "n": 738,
+            "MAE": 37.88057384673431,
+            "RMSE": 57.428011039360236,
+            "bias_mean_pred_minus_actual": -11.83858668678369,
+            "seed_MAE": [
+              37.42795405878243,
+              39.40694559939403,
+              40.41122041303307
+            ],
+            "MAE_persistence_same_samples": 70.5569674796748,
+            "MAE_mean6_same_samples": 47.01278048780488,
+            "MAE_ridge_same_samples": 37.9991527100271,
+            "MAE_hgb_same_samples": 35.60428468834688,
+            "MAE_improvement_vs_persistence_pct": 46.31207207474373,
+            "MAE_improvement_vs_ridge_pct": 0.3120565982027787
+          },
+          "h3": {
+            "n": 738,
+            "MAE": 37.78427708162654,
+            "RMSE": 57.16784919348186,
+            "bias_mean_pred_minus_actual": -7.970504872490074,
+            "seed_MAE": [
+              35.79183453027812,
+              40.51624158128878,
+              40.51037628685815
+            ],
+            "MAE_persistence_same_samples": 46.289584010840116,
+            "MAE_mean6_same_samples": 44.38629241192412,
+            "MAE_ridge_same_samples": 37.3466674796748,
+            "MAE_hgb_same_samples": 36.6881985094851,
+            "MAE_improvement_vs_persistence_pct": 18.374126946618915,
+            "MAE_improvement_vs_ridge_pct": -1.1717500689717562
+          },
+          "h6": {
+            "n": 738,
+            "MAE": 44.48985907776375,
+            "RMSE": 65.46324238037266,
+            "bias_mean_pred_minus_actual": -11.172132688961701,
+            "seed_MAE": [
+              43.132109255620136,
+              46.63413827002921,
+              46.91643743059629
+            ],
+            "MAE_persistence_same_samples": 66.28859349593496,
+            "MAE_mean6_same_samples": 48.99628644986449,
+            "MAE_ridge_same_samples": 46.65252994579946,
+            "MAE_hgb_same_samples": 43.20613157181572,
+            "MAE_improvement_vs_persistence_pct": 32.8845933644798,
+            "MAE_improvement_vs_ridge_pct": 4.63569900828162
+          },
+          "h12": {
+            "n": 720,
+            "MAE": 45.093031045256716,
+            "RMSE": 70.25734990294399,
+            "bias_mean_pred_minus_actual": -15.162937329374419,
+            "seed_MAE": [
+              44.88073241342571,
+              46.42947460385296,
+              45.55236491409673
+            ],
+            "MAE_persistence_same_samples": 70.07421805555556,
+            "MAE_improvement_vs_persistence_pct": 35.64961223041191
+          },
+          "h24": {
+            "n": 720,
+            "MAE": 52.66988063966963,
+            "RMSE": 80.46176621171571,
+            "bias_mean_pred_minus_actual": -17.840171154234145,
+            "seed_MAE": [
+              53.07417359244294,
+              52.46800297305849,
+              53.51745360171529
+            ],
+            "MAE_persistence_same_samples": 65.66049583333333,
+            "MAE_improvement_vs_persistence_pct": 19.784521924168686
+          }
+        },
+        "11": {
+          "h1": {
+            "n": 714,
+            "MAE": 24.399717460352164,
+            "RMSE": 34.775528896194224,
+            "bias_mean_pred_minus_actual": -5.685142386003369,
+            "seed_MAE": [
+              24.075308851894548,
+              24.035984566727127,
+              26.462605499163395
+            ],
+            "MAE_persistence_same_samples": 48.12626610644257,
+            "MAE_mean6_same_samples": 32.27847394957983,
+            "MAE_ridge_same_samples": 28.669528431372544,
+            "MAE_hgb_same_samples": 24.694307843137256,
+            "MAE_improvement_vs_persistence_pct": 49.3006222290621,
+            "MAE_improvement_vs_ridge_pct": 14.893202660243283
+          },
+          "h3": {
+            "n": 714,
+            "MAE": 24.67680297044279,
+            "RMSE": 34.065531193297886,
+            "bias_mean_pred_minus_actual": -2.3511689733804446,
+            "seed_MAE": [
+              24.429888891201145,
+              24.839911951644748,
+              26.62324644071982
+            ],
+            "MAE_persistence_same_samples": 31.607511204481792,
+            "MAE_mean6_same_samples": 29.683034173669466,
+            "MAE_ridge_same_samples": 27.345150700280115,
+            "MAE_hgb_same_samples": 25.421731512605046,
+            "MAE_improvement_vs_persistence_pct": 21.927408928850625,
+            "MAE_improvement_vs_ridge_pct": 9.758028979558674
+          },
+          "h6": {
+            "n": 714,
+            "MAE": 26.655698515873333,
+            "RMSE": 37.110132448215076,
+            "bias_mean_pred_minus_actual": -5.880498188659924,
+            "seed_MAE": [
+              26.52863597756941,
+              26.722073050103603,
+              28.212370318036122
+            ],
+            "MAE_persistence_same_samples": 41.364425770308124,
+            "MAE_mean6_same_samples": 30.881133333333327,
+            "MAE_ridge_same_samples": 32.09801484593837,
+            "MAE_hgb_same_samples": 28.10346330532213,
+            "MAE_improvement_vs_persistence_pct": 35.55888176983443,
+            "MAE_improvement_vs_ridge_pct": 16.95530504358808
+          },
+          "h12": {
+            "n": 696,
+            "MAE": 28.03633738817977,
+            "RMSE": 38.75672078546807,
+            "bias_mean_pred_minus_actual": -6.846309214661861,
+            "seed_MAE": [
+              28.1455079918264,
+              28.271675297323313,
+              29.03112334567788
+            ],
+            "MAE_persistence_same_samples": 43.10547557471264,
+            "MAE_improvement_vs_persistence_pct": 34.958756365915185
+          },
+          "h24": {
+            "n": 696,
+            "MAE": 27.6041109913245,
+            "RMSE": 37.25469741716569,
+            "bias_mean_pred_minus_actual": -6.194683116890918,
+            "seed_MAE": [
+              27.322361116620314,
+              27.668821370988056,
+              28.266619762234303
+            ],
+            "MAE_persistence_same_samples": 34.287182471264366,
+            "MAE_improvement_vs_persistence_pct": 19.491457151782182
+          }
+        },
+        "12": {
+          "h1": {
+            "n": 738,
+            "MAE": 23.53688672566786,
+            "RMSE": 35.77395683999849,
+            "bias_mean_pred_minus_actual": -5.874677005079209,
+            "seed_MAE": [
+              23.078386570217454,
+              25.701123073171605,
+              23.26190671183466
+            ],
+            "MAE_persistence_same_samples": 53.00702574525745,
+            "MAE_mean6_same_samples": 34.723579674796746,
+            "MAE_ridge_same_samples": 28.236836585365854,
+            "MAE_hgb_same_samples": 25.520662330623306,
+            "MAE_improvement_vs_persistence_pct": 55.59666592352862,
+            "MAE_improvement_vs_ridge_pct": 16.64474646615978
+          },
+          "h3": {
+            "n": 738,
+            "MAE": 24.176283144906932,
+            "RMSE": 36.35074440261002,
+            "bias_mean_pred_minus_actual": -7.6828872089618585,
+            "seed_MAE": [
+              23.36694556438506,
+              28.10376844622449,
+              23.3230327213407
+            ],
+            "MAE_persistence_same_samples": 32.54626558265583,
+            "MAE_mean6_same_samples": 31.82224796747968,
+            "MAE_ridge_same_samples": 27.31444620596206,
+            "MAE_hgb_same_samples": 26.202476016260167,
+            "MAE_improvement_vs_persistence_pct": 25.717182257030824,
+            "MAE_improvement_vs_ridge_pct": 11.489023198171761
+          },
+          "h6": {
+            "n": 738,
+            "MAE": 26.9257774378071,
+            "RMSE": 39.80888339084333,
+            "bias_mean_pred_minus_actual": -8.538243279896454,
+            "seed_MAE": [
+              26.16723504753653,
+              30.415318253824704,
+              26.0705490451951
+            ],
+            "MAE_persistence_same_samples": 45.56564092140921,
+            "MAE_mean6_same_samples": 34.41229024390244,
+            "MAE_ridge_same_samples": 33.77618672086721,
+            "MAE_hgb_same_samples": 29.84416639566395,
+            "MAE_improvement_vs_persistence_pct": 40.907717101470844,
+            "MAE_improvement_vs_ridge_pct": 20.281772302104994
+          },
+          "h12": {
+            "n": 720,
+            "MAE": 27.341226858707927,
+            "RMSE": 40.982503005819694,
+            "bias_mean_pred_minus_actual": -9.075692213037941,
+            "seed_MAE": [
+              27.709227013783654,
+              28.20348650686244,
+              27.307224723677503
+            ],
+            "MAE_persistence_same_samples": 49.92681944444444,
+            "MAE_improvement_vs_persistence_pct": 45.23739512561661
+          },
+          "h24": {
+            "n": 720,
+            "MAE": 29.451567317438123,
+            "RMSE": 42.64438601718027,
+            "bias_mean_pred_minus_actual": -10.645348386091655,
+            "seed_MAE": [
+              29.61353929311037,
+              29.63480905617608,
+              29.659625517357725
+            ],
+            "MAE_persistence_same_samples": 34.15128333333333,
+            "MAE_improvement_vs_persistence_pct": 13.761462402521357
+          }
+        }
+      },
+      "periods": {
+        "주평가_7-9월": {
+          "h1": {
+            "n": 2190,
+            "MAE": 52.4096659706291,
+            "RMSE": 105.8795316555546,
+            "bias_mean_pred_minus_actual": -27.5401986254802,
+            "seed_MAE": [
+              56.44553861810301,
+              51.084063231545485,
+              57.63471981712203
+            ],
+            "MAE_persistence_same_samples": 74.47805296803652,
+            "MAE_mean6_same_samples": 54.822112511415526,
+            "MAE_ridge_same_samples": 47.15483630136987,
+            "MAE_hgb_same_samples": 60.98085360730594,
+            "MAE_improvement_vs_persistence_pct": 29.630724915537783,
+            "MAE_improvement_vs_ridge_pct": -11.14377671820393
+          },
+          "h3": {
+            "n": 2190,
+            "MAE": 49.51095306231703,
+            "RMSE": 95.73694725035337,
+            "bias_mean_pred_minus_actual": -19.442032121600842,
+            "seed_MAE": [
+              49.851019690639895,
+              50.55264018201349,
+              51.158792772510715
+            ],
+            "MAE_persistence_same_samples": 53.35734794520548,
+            "MAE_mean6_same_samples": 56.645275616438354,
+            "MAE_ridge_same_samples": 47.6943804109589,
+            "MAE_hgb_same_samples": 62.57779278538812,
+            "MAE_improvement_vs_persistence_pct": 7.2087444953944315,
+            "MAE_improvement_vs_ridge_pct": -3.808777125744418
+          },
+          "h6": {
+            "n": 2190,
+            "MAE": 61.01346639028052,
+            "RMSE": 125.31440051993071,
+            "bias_mean_pred_minus_actual": -25.168432427717235,
+            "seed_MAE": [
+              61.725157155337385,
+              64.61307859343611,
+              62.549810121355094
+            ],
+            "MAE_persistence_same_samples": 76.60438767123287,
+            "MAE_mean6_same_samples": 67.40595095890411,
+            "MAE_ridge_same_samples": 60.78906662100457,
+            "MAE_hgb_same_samples": 72.94427319634703,
+            "MAE_improvement_vs_persistence_pct": 20.352517336036595,
+            "MAE_improvement_vs_ridge_pct": -0.3691449494939449
+          },
+          "h12": {
+            "n": 2136,
+            "MAE": 73.92777325753862,
+            "RMSE": 176.54240291409525,
+            "bias_mean_pred_minus_actual": -34.08416552587841,
+            "seed_MAE": [
+              70.86324918410395,
+              80.52685757761503,
+              75.28922275383866
+            ],
+            "MAE_persistence_same_samples": 100.21372518726592,
+            "MAE_improvement_vs_persistence_pct": 26.229892043836962
+          },
+          "h24": {
+            "n": 2136,
+            "MAE": 89.369265316506,
+            "RMSE": 210.47370309487664,
+            "bias_mean_pred_minus_actual": -51.5908058243655,
+            "seed_MAE": [
+              85.82781521085855,
+              93.62637360330112,
+              91.68144422185198
+            ],
+            "MAE_persistence_same_samples": 107.38282256554307,
+            "MAE_improvement_vs_persistence_pct": 16.775082660955533
+          }
+        },
+        "보조평가_10-12월": {
+          "h1": {
+            "n": 2190,
+            "MAE": 28.651819255307874,
+            "RMSE": 44.01041912448579,
+            "bias_mean_pred_minus_actual": -7.822639391872704,
+            "seed_MAE": [
+              28.239018221212156,
+              29.776916740181097,
+              30.084506002079934
+            ],
+            "MAE_persistence_same_samples": 57.32985433789954,
+            "MAE_mean6_same_samples": 38.06770054794521,
+            "MAE_ridge_same_samples": 31.667672785388127,
+            "MAE_hgb_same_samples": 28.649290730593606,
+            "MAE_improvement_vs_persistence_pct": 50.02286402746576,
+            "MAE_improvement_vs_ridge_pct": 9.523445409199146
+          },
+          "h3": {
+            "n": 2190,
+            "MAE": 28.92517386670221,
+            "RMSE": 43.874296161745114,
+            "bias_mean_pred_minus_actual": -6.041524202331125,
+            "seed_MAE": [
+              27.900511588209607,
+              31.22249522090372,
+              30.19089214918936
+            ],
+            "MAE_persistence_same_samples": 36.87151598173516,
+            "MAE_mean6_same_samples": 35.358716529680365,
+            "MAE_ridge_same_samples": 30.705177853881278,
+            "MAE_hgb_same_samples": 29.481476757990865,
+            "MAE_improvement_vs_persistence_pct": 21.55143856566485,
+            "MAE_improvement_vs_ridge_pct": 5.797080856035711
+          },
+          "h6": {
+            "n": 2190,
+            "MAE": 32.756579218641484,
+            "RMSE": 49.26625496528572,
+            "bias_mean_pred_minus_actual": -8.559330215397491,
+            "seed_MAE": [
+              32.00199186470967,
+              34.676739302455786,
+              33.79362028594148
+            ],
+            "MAE_persistence_same_samples": 51.17928082191781,
+            "MAE_mean6_same_samples": 38.175643287671235,
+            "MAE_ridge_same_samples": 37.56820799086758,
+            "MAE_hgb_same_samples": 33.779448721461186,
+            "MAE_improvement_vs_persistence_pct": 35.99640578651254,
+            "MAE_improvement_vs_ridge_pct": 12.80771436688103
+          },
+          "h12": {
+            "n": 2136,
+            "MAE": 33.55147776827138,
+            "RMSE": 52.14825902438755,
+            "bias_mean_pred_minus_actual": -10.401144421320952,
+            "seed_MAE": [
+              33.639533871676925,
+              34.369296819593686,
+              34.018991754582984
+            ],
+            "MAE_persistence_same_samples": 54.49539232209737,
+            "MAE_improvement_vs_persistence_pct": 38.432450270356945
+          },
+          "h24": {
+            "n": 2136,
+            "MAE": 36.67598491529936,
+            "RMSE": 56.98695359568832,
+            "bias_mean_pred_minus_actual": -11.620352770782143,
+            "seed_MAE": [
+              36.77505459492796,
+              36.69078854646843,
+              37.247689288505455
+            ],
+            "MAE_persistence_same_samples": 44.816647940074915,
+            "MAE_improvement_vs_persistence_pct": 18.164372836764972
+          }
+        }
+      }
+    },
+    "transformer/state": {
+      "monthly": {
+        "7": {
+          "h1": {
+            "n": 738,
+            "MAE": 120.58467658683489,
+            "RMSE": 223.75173677415964,
+            "bias_mean_pred_minus_actual": -76.87264531765803,
+            "seed_MAE": [
+              146.43372423316254,
+              104.42930192683198,
+              146.2850921279053
+            ],
+            "MAE_persistence_same_samples": 73.81699864498646,
+            "MAE_mean6_same_samples": 59.42945989159891,
+            "MAE_ridge_same_samples": 58.541844444444436,
+            "MAE_hgb_same_samples": 98.52120338753386,
+            "MAE_improvement_vs_persistence_pct": -63.35624422603753,
+            "MAE_improvement_vs_ridge_pct": -105.98031669683455
+          },
+          "h3": {
+            "n": 738,
+            "MAE": 67.28665200605883,
+            "RMSE": 129.74258700571554,
+            "bias_mean_pred_minus_actual": -38.214105796971616,
+            "seed_MAE": [
+              68.75864299756724,
+              68.3682104634683,
+              78.89646991989734
+            ],
+            "MAE_persistence_same_samples": 60.33733739837399,
+            "MAE_mean6_same_samples": 65.89081788617887,
+            "MAE_ridge_same_samples": 58.50068807588076,
+            "MAE_hgb_same_samples": 97.0009861788618,
+            "MAE_improvement_vs_persistence_pct": -11.517436644249594,
+            "MAE_improvement_vs_ridge_pct": -15.018565112912636
+          },
+          "h6": {
+            "n": 738,
+            "MAE": 103.83487641836828,
+            "RMSE": 200.88771807409248,
+            "bias_mean_pred_minus_actual": -61.938946233993626,
+            "seed_MAE": [
+              125.30511390010614,
+              99.21030032308768,
+              118.70713940573386
+            ],
+            "MAE_persistence_same_samples": 87.67255284552846,
+            "MAE_mean6_same_samples": 82.68005555555555,
+            "MAE_ridge_same_samples": 75.71836246612467,
+            "MAE_hgb_same_samples": 106.92511761517615,
+            "MAE_improvement_vs_persistence_pct": -18.434872771774373,
+            "MAE_improvement_vs_ridge_pct": -37.13301904121677
+          },
+          "h12": {
+            "n": 720,
+            "MAE": 127.37622236411306,
+            "RMSE": 249.97219784631716,
+            "bias_mean_pred_minus_actual": -104.23616618591414,
+            "seed_MAE": [
+              139.05504905286364,
+              115.58721223142147,
+              146.63736713759636
+            ],
+            "MAE_persistence_same_samples": 117.4341138888889,
+            "MAE_improvement_vs_persistence_pct": -8.466116144607652
+          },
+          "h24": {
+            "n": 720,
+            "MAE": 135.41531286774742,
+            "RMSE": 267.30219742199097,
+            "bias_mean_pred_minus_actual": -122.30489943416384,
+            "seed_MAE": [
+              134.38393144876693,
+              130.79657592855028,
+              146.8404426249716
+            ],
+            "MAE_persistence_same_samples": 151.96841388888888,
+            "MAE_improvement_vs_persistence_pct": 10.892461530357352
+          }
+        },
+        "8": {
+          "h1": {
+            "n": 738,
+            "MAE": 37.23077017665473,
+            "RMSE": 65.07654919628604,
+            "bias_mean_pred_minus_actual": -17.556532837657446,
+            "seed_MAE": [
+              36.54495704885968,
+              39.365302151494554,
+              38.34365941902167
+            ],
+            "MAE_persistence_same_samples": 72.73696612466125,
+            "MAE_mean6_same_samples": 46.97863075880759,
+            "MAE_ridge_same_samples": 35.91989620596206,
+            "MAE_hgb_same_samples": 33.16591436314363,
+            "MAE_improvement_vs_persistence_pct": 48.81451322447755,
+            "MAE_improvement_vs_ridge_pct": -3.6494369671232145
+          },
+          "h3": {
+            "n": 738,
+            "MAE": 39.550302839723706,
+            "RMSE": 64.58761871851993,
+            "bias_mean_pred_minus_actual": -13.701248652207497,
+            "seed_MAE": [
+              38.74682701454576,
+              41.11394123233495,
+              39.78796084250474
+            ],
+            "MAE_persistence_same_samples": 42.72142276422765,
+            "MAE_mean6_same_samples": 42.09500989159891,
+            "MAE_ridge_same_samples": 34.600409891598915,
+            "MAE_hgb_same_samples": 34.57758563685637,
+            "MAE_improvement_vs_persistence_pct": 7.422786319652365,
+            "MAE_improvement_vs_ridge_pct": -14.305879507302137
+          },
+          "h6": {
+            "n": 738,
+            "MAE": 46.35032497330022,
+            "RMSE": 72.52904853088658,
+            "bias_mean_pred_minus_actual": -12.362499019462565,
+            "seed_MAE": [
+              44.28836604621546,
+              48.66994360269375,
+              48.44340521135304
+            ],
+            "MAE_persistence_same_samples": 61.47213414634147,
+            "MAE_mean6_same_samples": 45.015041869918704,
+            "MAE_ridge_same_samples": 41.918958807588076,
+            "MAE_hgb_same_samples": 41.00931327913279,
+            "MAE_improvement_vs_persistence_pct": 24.599453692370673,
+            "MAE_improvement_vs_ridge_pct": -10.571269639717258
+          },
+          "h12": {
+            "n": 720,
+            "MAE": 42.99582896319495,
+            "RMSE": 74.7010251663468,
+            "bias_mean_pred_minus_actual": -6.770292748692298,
+            "seed_MAE": [
+              39.41783341842493,
+              48.31518278151486,
+              46.86944042765962
+            ],
+            "MAE_persistence_same_samples": 75.10255416666668,
+            "MAE_improvement_vs_persistence_pct": 42.75051036509473
+          },
+          "h24": {
+            "n": 720,
+            "MAE": 49.906999004083204,
+            "RMSE": 80.1906621322145,
+            "bias_mean_pred_minus_actual": 1.0590098157829706,
+            "seed_MAE": [
+              44.25905945616828,
+              56.870552130084576,
+              55.78373429956436
+            ],
+            "MAE_persistence_same_samples": 45.89854027777778,
+            "MAE_improvement_vs_persistence_pct": -8.733303286000496
+          }
+        },
+        "9": {
+          "h1": {
+            "n": 714,
+            "MAE": 48.26914631812153,
+            "RMSE": 91.81600006693917,
+            "bias_mean_pred_minus_actual": -19.042279188076574,
+            "seed_MAE": [
+              48.63936119618424,
+              50.02707507646318,
+              56.39344745853464
+            ],
+            "MAE_persistence_same_samples": 76.96093837535014,
+            "MAE_mean6_same_samples": 58.16702450980392,
+            "MAE_ridge_same_samples": 46.99765672268907,
+            "MAE_hgb_same_samples": 50.92853851540617,
+            "MAE_improvement_vs_persistence_pct": 37.28098001780384,
+            "MAE_improvement_vs_ridge_pct": -2.705431896179238
+          },
+          "h3": {
+            "n": 714,
+            "MAE": 49.90372764534643,
+            "RMSE": 97.06709888468531,
+            "bias_mean_pred_minus_actual": -13.005711563974534,
+            "seed_MAE": [
+              51.09870654785449,
+              53.84397288970254,
+              50.86257140934968
+            ],
+            "MAE_persistence_same_samples": 57.136172268907565,
+            "MAE_mean6_same_samples": 62.128309103641456,
+            "MAE_ridge_same_samples": 50.05893949579831,
+            "MAE_hgb_same_samples": 55.93890784313725,
+            "MAE_improvement_vs_persistence_pct": 12.658258921374923,
+            "MAE_improvement_vs_ridge_pct": 0.31005820741550494
+          },
+          "h6": {
+            "n": 714,
+            "MAE": 61.20066111253156,
+            "RMSE": 130.35969868796153,
+            "bias_mean_pred_minus_actual": -19.868698934293263,
+            "seed_MAE": [
+              62.53438659474028,
+              63.66013460932927,
+              63.664294904583315
+            ],
+            "MAE_persistence_same_samples": 80.80508403361345,
+            "MAE_mean6_same_samples": 74.76197577030813,
+            "MAE_ridge_same_samples": 64.86234285714286,
+            "MAE_hgb_same_samples": 70.82961946778711,
+            "MAE_improvement_vs_persistence_pct": 24.261373099899018,
+            "MAE_improvement_vs_ridge_pct": 5.645312184723317
+          },
+          "h12": {
+            "n": 696,
+            "MAE": 76.494186865203,
+            "RMSE": 183.44877528778102,
+            "bias_mean_pred_minus_actual": -41.424226520090954,
+            "seed_MAE": [
+              80.55457778063862,
+              70.26315452994561,
+              89.11225052135802
+            ],
+            "MAE_persistence_same_samples": 108.37660344827586,
+            "MAE_improvement_vs_persistence_pct": 29.418172897704025
+          },
+          "h24": {
+            "n": 696,
+            "MAE": 88.73427790138639,
+            "RMSE": 237.39828738320787,
+            "bias_mean_pred_minus_actual": -52.66093713907263,
+            "seed_MAE": [
+              91.37661400477364,
+              88.34091769925753,
+              95.34250303489313
+            ],
+            "MAE_persistence_same_samples": 124.86422701149424,
+            "MAE_improvement_vs_persistence_pct": 28.935388441384372
+          }
+        },
+        "10": {
+          "h1": {
+            "n": 738,
+            "MAE": 39.855286444927614,
+            "RMSE": 62.519201090153466,
+            "bias_mean_pred_minus_actual": -12.481703232573947,
+            "seed_MAE": [
+              41.031530905240274,
+              42.548640861486035,
+              40.33924659588408
+            ],
+            "MAE_persistence_same_samples": 70.5569674796748,
+            "MAE_mean6_same_samples": 47.01278048780488,
+            "MAE_ridge_same_samples": 37.9991527100271,
+            "MAE_hgb_same_samples": 35.60428468834688,
+            "MAE_improvement_vs_persistence_pct": 43.51332282469673,
+            "MAE_improvement_vs_ridge_pct": -4.884671374292844
+          },
+          "h3": {
+            "n": 738,
+            "MAE": 37.4943844625685,
+            "RMSE": 56.643975528837,
+            "bias_mean_pred_minus_actual": -9.723865493495289,
+            "seed_MAE": [
+              36.668606082942105,
+              40.91856862534417,
+              37.37638424294945
+            ],
+            "MAE_persistence_same_samples": 46.289584010840116,
+            "MAE_mean6_same_samples": 44.38629241192412,
+            "MAE_ridge_same_samples": 37.3466674796748,
+            "MAE_hgb_same_samples": 36.6881985094851,
+            "MAE_improvement_vs_persistence_pct": 19.00038580215358,
+            "MAE_improvement_vs_ridge_pct": -0.3955292208443767
+          },
+          "h6": {
+            "n": 738,
+            "MAE": 44.2004999395386,
+            "RMSE": 66.17492794598145,
+            "bias_mean_pred_minus_actual": -13.099263822958722,
+            "seed_MAE": [
+              44.44608539421578,
+              46.554668592354794,
+              44.49111886882523
+            ],
+            "MAE_persistence_same_samples": 66.28859349593496,
+            "MAE_mean6_same_samples": 48.99628644986449,
+            "MAE_ridge_same_samples": 46.65252994579946,
+            "MAE_hgb_same_samples": 43.20613157181572,
+            "MAE_improvement_vs_persistence_pct": 33.32110758655767,
+            "MAE_improvement_vs_ridge_pct": 5.255942194581097
+          },
+          "h12": {
+            "n": 720,
+            "MAE": 46.734552778914235,
+            "RMSE": 71.98375972839628,
+            "bias_mean_pred_minus_actual": -14.27948439865907,
+            "seed_MAE": [
+              46.01895973720021,
+              48.42158284552891,
+              47.88213158838749
+            ],
+            "MAE_persistence_same_samples": 70.07421805555556,
+            "MAE_improvement_vs_persistence_pct": 33.30706488674251
+          },
+          "h24": {
+            "n": 720,
+            "MAE": 51.97382480737898,
+            "RMSE": 80.58009000664273,
+            "bias_mean_pred_minus_actual": -18.837623900731405,
+            "seed_MAE": [
+              52.12922878617711,
+              52.988617339388526,
+              52.20354617212613
+            ],
+            "MAE_persistence_same_samples": 65.66049583333333,
+            "MAE_improvement_vs_persistence_pct": 20.844605043335886
+          }
+        },
+        "11": {
+          "h1": {
+            "n": 714,
+            "MAE": 25.508328999182755,
+            "RMSE": 34.37309753806381,
+            "bias_mean_pred_minus_actual": 0.24043319670893543,
+            "seed_MAE": [
+              24.94187340770516,
+              26.03607109701066,
+              26.31221812169692
+            ],
+            "MAE_persistence_same_samples": 48.12626610644257,
+            "MAE_mean6_same_samples": 32.27847394957983,
+            "MAE_ridge_same_samples": 28.669528431372544,
+            "MAE_hgb_same_samples": 24.694307843137256,
+            "MAE_improvement_vs_persistence_pct": 46.99707444004678,
+            "MAE_improvement_vs_ridge_pct": 11.026339131307603
+          },
+          "h3": {
+            "n": 714,
+            "MAE": 26.335221905807153,
+            "RMSE": 34.55570744317361,
+            "bias_mean_pred_minus_actual": 1.254199044102046,
+            "seed_MAE": [
+              26.602651970291678,
+              26.208271527589538,
+              27.80259982142729
+            ],
+            "MAE_persistence_same_samples": 31.607511204481792,
+            "MAE_mean6_same_samples": 29.683034173669466,
+            "MAE_ridge_same_samples": 27.345150700280115,
+            "MAE_hgb_same_samples": 25.421731512605046,
+            "MAE_improvement_vs_persistence_pct": 16.680494913269396,
+            "MAE_improvement_vs_ridge_pct": 3.6932646871922965
+          },
+          "h6": {
+            "n": 714,
+            "MAE": 28.299915309526675,
+            "RMSE": 36.717363177696626,
+            "bias_mean_pred_minus_actual": 0.8510028463358305,
+            "seed_MAE": [
+              28.046747825157745,
+              28.754476347471822,
+              29.129542180176205
+            ],
+            "MAE_persistence_same_samples": 41.364425770308124,
+            "MAE_mean6_same_samples": 30.881133333333327,
+            "MAE_ridge_same_samples": 32.09801484593837,
+            "MAE_hgb_same_samples": 28.10346330532213,
+            "MAE_improvement_vs_persistence_pct": 31.583928019035405,
+            "MAE_improvement_vs_ridge_pct": 11.83281755785063
+          },
+          "h12": {
+            "n": 696,
+            "MAE": 28.16379789526709,
+            "RMSE": 37.49876615747879,
+            "bias_mean_pred_minus_actual": -3.7851742064158125,
+            "seed_MAE": [
+              27.933534746098793,
+              28.905340132088497,
+              28.53354436436467
+            ],
+            "MAE_persistence_same_samples": 43.10547557471264,
+            "MAE_improvement_vs_persistence_pct": 34.663061896969126
+          },
+          "h24": {
+            "n": 696,
+            "MAE": 27.84198515313247,
+            "RMSE": 36.40831222793261,
+            "bias_mean_pred_minus_actual": -2.9335782837703306,
+            "seed_MAE": [
+              28.425869085048806,
+              27.468344818120716,
+              28.317834705791253
+            ],
+            "MAE_persistence_same_samples": 34.287182471264366,
+            "MAE_improvement_vs_persistence_pct": 18.79768722184604
+          }
+        },
+        "12": {
+          "h1": {
+            "n": 738,
+            "MAE": 23.48138196132047,
+            "RMSE": 36.12373552354819,
+            "bias_mean_pred_minus_actual": -9.129191527512015,
+            "seed_MAE": [
+              23.053269253503544,
+              25.255135974471806,
+              23.298260676863233
+            ],
+            "MAE_persistence_same_samples": 53.00702574525745,
+            "MAE_mean6_same_samples": 34.723579674796746,
+            "MAE_ridge_same_samples": 28.236836585365854,
+            "MAE_hgb_same_samples": 25.520662330623306,
+            "MAE_improvement_vs_persistence_pct": 55.70137801323185,
+            "MAE_improvement_vs_ridge_pct": 16.841315101529354
+          },
+          "h3": {
+            "n": 738,
+            "MAE": 24.94685438704943,
+            "RMSE": 37.70009919428601,
+            "bias_mean_pred_minus_actual": -9.52111726367635,
+            "seed_MAE": [
+              23.836532451811884,
+              27.70176798851768,
+              24.36874400814051
+            ],
+            "MAE_persistence_same_samples": 32.54626558265583,
+            "MAE_mean6_same_samples": 31.82224796747968,
+            "MAE_ridge_same_samples": 27.31444620596206,
+            "MAE_hgb_same_samples": 26.202476016260167,
+            "MAE_improvement_vs_persistence_pct": 23.34956425740035,
+            "MAE_improvement_vs_ridge_pct": 8.667910749718379
+          },
+          "h6": {
+            "n": 738,
+            "MAE": 27.015097897609717,
+            "RMSE": 40.522539829380456,
+            "bias_mean_pred_minus_actual": -12.018650515641625,
+            "seed_MAE": [
+              26.53617648411508,
+              29.766729977357034,
+              26.05174856463874
+            ],
+            "MAE_persistence_same_samples": 45.56564092140921,
+            "MAE_mean6_same_samples": 34.41229024390244,
+            "MAE_ridge_same_samples": 33.77618672086721,
+            "MAE_hgb_same_samples": 29.84416639566395,
+            "MAE_improvement_vs_persistence_pct": 40.71169119687164,
+            "MAE_improvement_vs_ridge_pct": 20.0173242738513
+          },
+          "h12": {
+            "n": 720,
+            "MAE": 27.913470503344797,
+            "RMSE": 43.06641219211471,
+            "bias_mean_pred_minus_actual": -15.233349856611092,
+            "seed_MAE": [
+              28.015988530556356,
+              28.847330230886406,
+              27.539355043318533
+            ],
+            "MAE_persistence_same_samples": 49.92681944444444,
+            "MAE_improvement_vs_persistence_pct": 44.091230296764195
+          },
+          "h24": {
+            "n": 720,
+            "MAE": 29.454864488326177,
+            "RMSE": 43.22873566092069,
+            "bias_mean_pred_minus_actual": -13.83034913883209,
+            "seed_MAE": [
+              29.333057274280655,
+              29.58675110655361,
+              29.66059960926374
+            ],
+            "MAE_persistence_same_samples": 34.15128333333333,
+            "MAE_improvement_vs_persistence_pct": 13.751807799337426
+          }
+        }
+      },
+      "periods": {
+        "주평가_7-9월": {
+          "h1": {
+            "n": 2190,
+            "MAE": 68.91870784593337,
+            "RMSE": 145.0750036812886,
+            "bias_mean_pred_minus_actual": -38.029644209547705,
+            "seed_MAE": [
+              77.51907336995798,
+              64.76700886502269,
+              80.60316900777437
+            ],
+            "MAE_persistence_same_samples": 74.47805296803652,
+            "MAE_mean6_same_samples": 54.822112511415526,
+            "MAE_ridge_same_samples": 47.15483630136987,
+            "MAE_hgb_same_samples": 60.98085360730594,
+            "MAE_improvement_vs_persistence_pct": 7.464407165006095,
+            "MAE_improvement_vs_ridge_pct": -46.15406022294101
+          },
+          "h3": {
+            "n": 2190,
+            "MAE": 52.2725727008972,
+            "RMSE": 100.74786926200687,
+            "bias_mean_pred_minus_actual": -21.734981570854792,
+            "seed_MAE": [
+              52.887449015574205,
+              54.44859570536548,
+              56.57761912736457
+            ],
+            "MAE_persistence_same_samples": 53.35734794520548,
+            "MAE_mean6_same_samples": 56.645275616438354,
+            "MAE_ridge_same_samples": 47.6943804109589,
+            "MAE_hgb_same_samples": 62.57779278538812,
+            "MAE_improvement_vs_persistence_pct": 2.0330381589097644,
+            "MAE_improvement_vs_ridge_pct": -9.599018271105066
+          },
+          "h6": {
+            "n": 2190,
+            "MAE": 70.5634477905931,
+            "RMSE": 144.6114687556552,
+            "bias_mean_pred_minus_actual": -31.516309422893173,
+            "seed_MAE": [
+              77.53860284430588,
+              70.58856444214054,
+              77.0837481686222
+            ],
+            "MAE_persistence_same_samples": 76.60438767123287,
+            "MAE_mean6_same_samples": 67.40595095890411,
+            "MAE_ridge_same_samples": 60.78906662100457,
+            "MAE_hgb_same_samples": 72.94427319634703,
+            "MAE_improvement_vs_persistence_pct": 7.88589278536628,
+            "MAE_improvement_vs_ridge_pct": -16.079176261296908
+          },
+          "h12": {
+            "n": 2136,
+            "MAE": 82.35385347090032,
+            "RMSE": 184.14516828354735,
+            "bias_mean_pred_minus_actual": -50.91568918113293,
+            "seed_MAE": [
+              86.40751943569862,
+              78.1427340646799,
+              94.26358979861867
+            ],
+            "MAE_persistence_same_samples": 100.21372518726592,
+            "MAE_improvement_vs_persistence_pct": 17.821782079242617
+          },
+          "h24": {
+            "n": 2136,
+            "MAE": 91.38161140781037,
+            "RMSE": 211.2246439783575,
+            "bias_mean_pred_minus_actual": -58.02858275937676,
+            "seed_MAE": [
+              89.99114082344373,
+              92.04382533750017,
+              99.36694264885371
+            ],
+            "MAE_persistence_same_samples": 107.38282256554307,
+            "MAE_improvement_vs_persistence_pct": 14.901090114264846
+          }
+        },
+        "보조평가_10-12월": {
+          "h1": {
+            "n": 2190,
+            "MAE": 29.660003739373327,
+            "RMSE": 46.28291105629886,
+            "bias_mean_pred_minus_actual": -7.2041876851567395,
+            "seed_MAE": [
+              29.727433849431243,
+              31.337416469498855,
+              30.02347219460233
+            ],
+            "MAE_persistence_same_samples": 57.32985433789954,
+            "MAE_mean6_same_samples": 38.06770054794521,
+            "MAE_ridge_same_samples": 31.667672785388127,
+            "MAE_hgb_same_samples": 28.649290730593606,
+            "MAE_improvement_vs_persistence_pct": 48.26429600787293,
+            "MAE_improvement_vs_ridge_pct": 6.339806084333311
+          },
+          "h3": {
+            "n": 2190,
+            "MAE": 29.627845987107,
+            "RMSE": 44.15314378097179,
+            "bias_mean_pred_minus_actual": -6.076392309271146,
+            "seed_MAE": [
+              29.06259623079301,
+              31.66872798709085,
+              29.87167165379154
+            ],
+            "MAE_persistence_same_samples": 36.87151598173516,
+            "MAE_mean6_same_samples": 35.358716529680365,
+            "MAE_ridge_same_samples": 30.705177853881278,
+            "MAE_hgb_same_samples": 29.481476757990865,
+            "MAE_improvement_vs_persistence_pct": 19.64570699565598,
+            "MAE_improvement_vs_ridge_pct": 3.508632556701171
+          },
+          "h6": {
+            "n": 2190,
+            "MAE": 33.22522864603539,
+            "RMSE": 49.685004407967476,
+            "bias_mean_pred_minus_actual": -8.186942808038024,
+            "seed_MAE": [
+              33.064058088297166,
+              35.094012902530686,
+              33.2690088048138
+            ],
+            "MAE_persistence_same_samples": 51.17928082191781,
+            "MAE_mean6_same_samples": 38.175643287671235,
+            "MAE_ridge_same_samples": 37.56820799086758,
+            "MAE_hgb_same_samples": 33.779448721461186,
+            "MAE_improvement_vs_persistence_pct": 35.08070431539455,
+            "MAE_improvement_vs_ridge_pct": 11.560251545370273
+          },
+          "h12": {
+            "n": 2136,
+            "MAE": 34.33922289247772,
+            "RMSE": 53.19773292339019,
+            "bias_mean_pred_minus_actual": -11.181517748810824,
+            "seed_MAE": [
+              34.057538827747884,
+              35.46429501261827,
+              34.72042006199726
+            ],
+            "MAE_persistence_same_samples": 54.49539232209737,
+            "MAE_improvement_vs_persistence_pct": 36.986924161378155
+          },
+          "h24": {
+            "n": 2136,
+            "MAE": 36.519980318112324,
+            "RMSE": 57.01346436173861,
+            "bias_mean_pred_minus_actual": -11.967561364227468,
+            "seed_MAE": [
+              36.72155938517021,
+              36.78475340566028,
+              36.821815504602725
+            ],
+            "MAE_persistence_same_samples": 44.816647940074915,
+            "MAE_improvement_vs_persistence_pct": 18.512468029862926
+          }
+        }
+      }
+    }
+  }
+}

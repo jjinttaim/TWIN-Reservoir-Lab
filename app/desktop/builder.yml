@@ -1,0 +1,13 @@
+appId: kr.twin.reservoirlab
+productName: TWIN Reservoir Lab
+directories:
+  app: stage
+  output: out/dist
+  buildResources: .
+mac:
+  icon: icon.icns
+  category: public.app-category.education
+  target:
+    - dmg
+    - zip
+  identity: null

@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "file": "/Users/shimjaemin/Documents/학교 파일 모음/대회 모음/워터프라이즈/TWIN_디지털트윈/assets/models/twin-dam.glb",
+  "bytes": 42570456,
+  "meshes": 305,
+  "meshInstances": 305,
+  "nodes": 305,
+  "materials": 15,
+  "uniqueVertices": 572184,
+  "triangleInstances": 853140,
+  "pbr": {
+    "embeddedImages": 12,
+    "textures": 18,
+    "embeddedTextureBytes": 9279104,
+    "baseColorTextureMaterials": 6,
+    "normalTextureMaterials": 6,
+    "roughnessTextureMaterials": 6,
+    "texturedPrimitiveInstances": 88,
+    "uvPrimitiveInstances": 88,
+    "normalPrimitiveInstances": 305
+  },
+  "bounds": {
+    "min": [
+      -1253.353271484375,
+      -19,
+      -1756.2322998046875
+    ],
+    "max": [
+      1322.9420166015625,
+      326.835693359375,
+      900
+    ]
+  },
+  "dimensions": [
+    2576.2952880859375,
+    345.835693359375,
+    2656.2322998046875
+  ],
+  "reservoirRangeY": [
+    116,
+    121.5
+  ],
+  "channels": 2,
+  "warnings": [
+    "모델이 20 MiB를 넘습니다 (40.6 MiB). 압축/정리를 권장합니다.",
+    "삼각형 853,140개: 브라우저 성능을 확인하세요."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "dataKind": "synthetic",
+  "label": "가상 댐 합성 예제",
+  "source": "TWIN 소프트웨어 시연용 고정 난수 생성",
+  "warning": "실제 댐 관측자료가 아닙니다. 예제 결과는 실제 예측 정확도나 운영 개선의 증거가 아닙니다.",
+  "timestepHours": 1,
+  "timeZone": "+09:00",
+  "count": 168,
+  "start": "2026-06-30T15:00:00.000Z",
+  "end": "2026-07-07T14:00:00.000Z",
+  "timestampConvention": "interval_start",
+  "initialStorageMcm": 60
+}

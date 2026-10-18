@@ -1,0 +1,2 @@
+0698dd460bb7f12307d90b494778859f998ab7093e7a63719ef372ae9e7dcbe7  Mac/TWIN_Reservoir_Lab_1.6.1_mac_arm64.zip
+79971e621960260d86ce454799653da09d96e87d2ad964088c44da854a5c6216  Windows/TWIN_Reservoir_Lab_1.6.1_win_x64.zip

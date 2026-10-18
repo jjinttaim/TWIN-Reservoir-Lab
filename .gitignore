@@ -1,0 +1,17 @@
+# dependencies and build outputs
+node_modules/
+app/desktop/stage/
+app/desktop/out/
+app/work/
+__pycache__/
+*.pyc
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# distribution binaries live in GitHub Releases, not in the tree
+*.zip
+*.dmg
+*.app/

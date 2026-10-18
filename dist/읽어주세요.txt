@@ -1,0 +1,27 @@
+TWIN Reservoir Lab 1.6.1 배포 묶음 (2026-10-19)
+
+팀 TWIN (Turbid Water INtelligence)의 연구용 댐 운영 시뮬레이터이자 디지털 트윈 시제품입니다.
+소양강댐 외형을 참고한 3D 장면, 물수지 운영 모형, 2024년 소양강댐 공개자료로 학습한 LSTM 유입량 예측기를 담고 있습니다.
+인터넷 연결 없이 동작하며, 불러온 자료와 계산 결과는 사용자의 컴퓨터 안에서만 처리됩니다. 실제 댐 운영이나 안전 판단에는 사용할 수 없습니다.
+
+[무엇을 받아야 하나]
+  Mac (Apple Silicon, M1 이후)  ->  Mac/TWIN_Reservoir_Lab_1.6.1_mac_arm64.zip   (설치 방법: Mac/설치안내_Mac.txt)
+  Windows 10, 11 (64비트)        ->  Windows/TWIN_Reservoir_Lab_1.6.1_win_x64.zip  (설치 방법: Windows/설치안내_Windows.txt)
+  Intel Mac은 묶음이 없습니다. 소스 폴더(desktop)에서 npm run pack:mac-intel 로 만들 수 있습니다.
+
+[한 줄 요약]
+  Mac: zip을 풀고 "설치.command"를 오른쪽 클릭해 "열기". 응용 프로그램 폴더에 복사되고 실행됩니다.
+  Windows: zip을 풀어 나온 "TWIN Reservoir Lab" 폴더를 원하는 곳에 두고, 폴더 안의 "바로가기 만들기.bat"를 실행한 뒤 바로 가기로 실행합니다.
+
+[처음 실행할 때 나오는 보안 경고]
+  두 묶음 모두 유료 개발자 인증서로 서명하지 않은 연구용 시제품입니다. 그래서 Mac은 "확인되지 않은 개발자", Windows는 SmartScreen 창이 한 번 나옵니다.
+  각 설치 안내에 적힌 대로 한 번만 허용하면 그 뒤로는 묻지 않습니다. 묶음을 다른 곳에서 받았다면 아래 SHA-256 값과 맞는지 확인하세요.
+
+[파일 확인값 (SHA-256)]
+  0698dd460bb7f12307d90b494778859f998ab7093e7a63719ef372ae9e7dcbe7  Mac/TWIN_Reservoir_Lab_1.6.1_mac_arm64.zip
+  79971e621960260d86ce454799653da09d96e87d2ad964088c44da854a5c6216  Windows/TWIN_Reservoir_Lab_1.6.1_win_x64.zip
+  Mac: 터미널에서 shasum -a 256 파일이름        Windows: PowerShell에서 Get-FileHash 파일이름
+
+[이 버전에 들어 있는 것]
+  운영 실험실(3D 장면, 운영안 비교, 시간 재생), AI 예측(LSTM 유입량 예측기, 2024년 평가표), 데이터 연결(CSV, Excel), 댐 운영 설정, 사용 안내.
+  소스와 학습 코드는 팀 폴더 TWIN_디지털트윈 과 AI_구축_v1_20261018 에 있습니다.

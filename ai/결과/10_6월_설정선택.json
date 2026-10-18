@@ -1,0 +1,95 @@
+{
+  "tuning_month": "2024-06",
+  "train_samples": 3593,
+  "tuning_samples": 714,
+  "criterion": "6월 MAE (0 이상 제한 후), 동률이면 목록의 앞 설정",
+  "ridge": [
+    {
+      "alpha": 0.1,
+      "june_MAE": 23.295132818297553
+    },
+    {
+      "alpha": 1.0,
+      "june_MAE": 23.2978075446451
+    },
+    {
+      "alpha": 10.0,
+      "june_MAE": 23.32485296638932
+    },
+    {
+      "alpha": 100.0,
+      "june_MAE": 23.578106123457978
+    }
+  ],
+  "hgb": [
+    {
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 24,
+      "l2_regularization": 0.0,
+      "june_MAE": 24.69970771066863
+    },
+    {
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 24,
+      "l2_regularization": 1.0,
+      "june_MAE": 24.65808741949561
+    },
+    {
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 72,
+      "l2_regularization": 0.0,
+      "june_MAE": 25.097920998488878
+    },
+    {
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 72,
+      "l2_regularization": 1.0,
+      "june_MAE": 25.192130836968346
+    },
+    {
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 24,
+      "l2_regularization": 0.0,
+      "june_MAE": 24.589047351110626
+    },
+    {
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 24,
+      "l2_regularization": 1.0,
+      "june_MAE": 24.495309180614733
+    },
+    {
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 72,
+      "l2_regularization": 0.0,
+      "june_MAE": 24.778945977304208
+    },
+    {
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 72,
+      "l2_regularization": 1.0,
+      "june_MAE": 24.72120872891131
+    }
+  ],
+  "selected": {
+    "ridge": {
+      "alpha": 0.1
+    },
+    "ridge_june_MAE": 23.295132818297553,
+    "hgb": {
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 24,
+      "l2_regularization": 1.0
+    },
+    "hgb_june_MAE": 24.495309180614733,
+    "hgb_fixed": {
+      "learning_rate": 0.05,
+      "max_iter": 200,
+      "random_state": 42,
+      "early_stopping": false
+    },
+    "note": "선택 후 특징, 설정, 주지표 고정. 이후 달은 계수만 재학습."
+  },
+  "persistence_june_MAE": 28.089549019607844,
+  "mean6_june_MAE": 26.540320494864616
+}
