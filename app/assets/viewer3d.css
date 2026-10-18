@@ -1,0 +1,20 @@
+.twin-viewer { position: relative; width: 100%; min-height: 440px; height: min(62vw, 600px); overflow: hidden; background: #dce8e9; isolation: isolate; }
+.twin-viewer-canvas { display: block; width: 100%; height: 100%; outline: none; touch-action: none; cursor: grab; }
+.twin-viewer-canvas:active { cursor: grabbing; }
+.twin-viewer-canvas:focus-visible { outline: 3px solid #087b75; outline-offset: -4px; }
+.twin-viewer-status { position: absolute; z-index: 3; top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(380px, calc(100% - 48px)); padding: 18px 22px; border: 1px solid #fff9; border-radius: 14px; background: #f6fbf5ec; box-shadow: 0 10px 45px #153e4720; backdrop-filter: blur(12px); color: #254547; font-size: 13px; line-height: 1.7; text-align: center; }
+.twin-viewer-status[hidden] { display: none; }
+.twin-viewer-status[data-phase="error"] { border-color: #d3b68c; background: #fff9f0f2; color: #694821; }
+.twin-viewer-note { position: absolute; left: 16px; bottom: 14px; max-width: calc(100% - 32px); z-index: 2; padding: 7px 10px; border: 1px solid #ffffff66; border-radius: 6px; color: #22464a; background: #f4faf5c9; backdrop-filter: blur(8px); font-size: 10px; font-weight: 600; pointer-events: none; letter-spacing: -.1px; }
+.twin-viewer:fullscreen { height: 100vh; min-height: 100vh; border-radius: 0; }
+@media (max-width: 760px) { .twin-viewer { height: 480px; min-height: 380px; } .twin-viewer-note { left: 10px; bottom: 10px; font-size: 9px; } }
+@media (prefers-reduced-motion: reduce) { .twin-viewer-status { backdrop-filter: none; } }
+
+.twin-feature-labels { position: absolute; inset: 0; pointer-events: none; z-index: 4; overflow: hidden; }
+.twin-feature-label { position: absolute; pointer-events: auto; display: flex; gap: 6px; align-items: center; padding: 7px 11px; font-family: inherit; font-size: 11px; font-weight: 600; line-height: 1.35; color: #254d41; border: 1px solid #ffffffb8; border-radius: 2px; background: #f8fcf1eb; box-shadow: 0 2px 8px #123f4320; white-space: nowrap; backdrop-filter: blur(8px); cursor: pointer; }
+.twin-feature-label[aria-pressed="true"] { color: #fff; background: #286e60ed; border-color: #c4e5d2; }
+.twin-feature-label:focus-visible { outline: 3px solid #e5b16c; outline-offset: 3px; }
+.twin-feature-label[hidden] { display: none; }
+.twin-forecast-label { pointer-events: none; cursor: default; color: #5b4300; background: #fff6d6eb; border-color: #e0a800; border-left-width: 4px; }
+.twin-forecast-label .twin-feature-value { font-variant-numeric: tabular-nums; }
+@media (max-width: 620px) { .twin-feature-label { font-size: 10px; padding: 6px 8px; } }

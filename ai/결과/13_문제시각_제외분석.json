@@ -1,0 +1,72 @@
+{
+  "definition": "문제 시각(교차확인.json 의 21개)을 입력 또는 목표의 원천 행으로 쓰는 표본 전체를 학습과 평가에서 제외. 시간 격자는 유지하고, 영향받는 표본만 뺀다(행 삭제 후 당기기 금지).",
+  "affected_samples_total": 243,
+  "months": {
+    "7": {
+      "n_eval_original": 738,
+      "n_eval_clean": 711,
+      "n_train_original": 4313,
+      "n_train_clean": 4151,
+      "MAE_persistence_clean_samples": 61.02740506329114,
+      "ridge_MAE_original_fit_on_clean_samples": 59.598900049343385,
+      "ridge_MAE_clean_fit_on_clean_samples": 59.579996402671,
+      "hgb_MAE_original_fit_on_clean_samples": 99.08482043471693,
+      "hgb_MAE_clean_fit_on_clean_samples": 96.93768404529317
+    },
+    "8": {
+      "n_eval_original": 738,
+      "n_eval_clean": 738,
+      "n_train_original": 5057,
+      "n_train_clean": 4868,
+      "MAE_persistence_clean_samples": 42.72142276422765,
+      "ridge_MAE_original_fit_on_clean_samples": 34.60040947174686,
+      "ridge_MAE_clean_fit_on_clean_samples": 34.64171640223863,
+      "hgb_MAE_original_fit_on_clean_samples": 34.57758493046011,
+      "hgb_MAE_clean_fit_on_clean_samples": 34.781594572055056
+    },
+    "9": {
+      "n_eval_original": 714,
+      "n_eval_clean": 660,
+      "n_train_original": 5801,
+      "n_train_clean": 5612,
+      "MAE_persistence_clean_samples": 56.43518333333333,
+      "ridge_MAE_original_fit_on_clean_samples": 49.30720055051746,
+      "ridge_MAE_clean_fit_on_clean_samples": 49.3227346937564,
+      "hgb_MAE_original_fit_on_clean_samples": 55.01166607908462,
+      "hgb_MAE_clean_fit_on_clean_samples": 55.66418813969922
+    },
+    "10": {
+      "n_eval_original": 738,
+      "n_eval_clean": 738,
+      "n_train_original": 6521,
+      "n_train_clean": 6278,
+      "MAE_persistence_clean_samples": 46.289584010840116,
+      "ridge_MAE_original_fit_on_clean_samples": 37.34666644254937,
+      "ridge_MAE_clean_fit_on_clean_samples": 37.43215879317388,
+      "hgb_MAE_original_fit_on_clean_samples": 36.6882001515844,
+      "hgb_MAE_clean_fit_on_clean_samples": 36.81966211949998
+    },
+    "11": {
+      "n_eval_original": 714,
+      "n_eval_clean": 714,
+      "n_train_original": 7265,
+      "n_train_clean": 7022,
+      "MAE_persistence_clean_samples": 31.607511204481792,
+      "ridge_MAE_original_fit_on_clean_samples": 27.34515217037941,
+      "ridge_MAE_clean_fit_on_clean_samples": 27.367369168544023,
+      "hgb_MAE_original_fit_on_clean_samples": 25.421732151364317,
+      "hgb_MAE_clean_fit_on_clean_samples": 25.555128851439672
+    },
+    "12": {
+      "n_eval_original": 738,
+      "n_eval_clean": 738,
+      "n_train_original": 7985,
+      "n_train_clean": 7742,
+      "MAE_persistence_clean_samples": 32.54626558265583,
+      "ridge_MAE_original_fit_on_clean_samples": 27.314445580225634,
+      "ridge_MAE_clean_fit_on_clean_samples": 27.345571763842486,
+      "hgb_MAE_original_fit_on_clean_samples": 26.202476217044968,
+      "hgb_MAE_clean_fit_on_clean_samples": 26.261175865107905
+    }
+  }
+}

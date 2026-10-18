@@ -1,0 +1,313 @@
+{
+  "prepared_on": "2026-10-18 18:34",
+  "source_file": "소양강댐_2024_시간별_원문23열.csv",
+  "source_sha256": "3e765ee0053b7e4f22ce7e1b3569790deeec855bb822875cf6b8311bc45c4274",
+  "rows": 8784,
+  "time_rule": {
+    "raw_label": "YYYYMMDDHH, HH=01..24 (원문 보존)",
+    "analysis_label": "24시는 다음 날 00:00 으로 환산한 달력 라벨. 시간대와 구간 의미(시작/끝, 평균/순간)는 미확인 상태로 둔다.",
+    "first_label": "2024-01-01 01:00",
+    "last_label": "2025-01-01 00:00 (원문 2024-12-31 24시)",
+    "month_definition": "분석 라벨 기준 [월초 00:00, 다음 월초 00:00)"
+  },
+  "sample_set": {
+    "issue_rows_i": [
+      51,
+      8777
+    ],
+    "count": 8727,
+    "reason": "지평 1, 3, 6과 지연 0, 1, 3의 비교에 필요한 과거 48+3행과 미래 6행이 모두 있는 공통 발행 시각",
+    "eligible_for_monthly_eval": 8660,
+    "excluded_month_end_issue_times_per_month": {
+      "1": 6,
+      "2": 6,
+      "3": 6,
+      "4": 6,
+      "5": 6,
+      "6": 6,
+      "7": 6,
+      "8": 6,
+      "9": 6,
+      "10": 6,
+      "11": 6,
+      "12": 1
+    },
+    "eligibility_rule": "발행 시각과 최대 목표 시각 t+6 이 같은 달 안에 있는 표본만 조정과 평가에 사용"
+  },
+  "targets": {
+    "point": {
+      "y_h1": "q(t+1) 공개 총유입량 m³/s",
+      "y_h3": "q(t+3) 공개 총유입량 m³/s",
+      "y_h6": "q(t+6) 공개 총유입량 m³/s"
+    },
+    "mean3": "q(t+1), q(t+2), q(t+3) 의 산술평균 (별도 민감도, 점값 지표와 직접 비교하지 않음)",
+    "note": "공식 총유입량을 그대로 목표로 쓴다. 물수지로 재구성한 부호 있는 값으로 바꾸지 않는다."
+  },
+  "features": {
+    "base_13": {
+      "q_latest": "q(t-L): 최신 이용 가능 유입량",
+      "q_lag1": "q(t-L-1)",
+      "q_lag3": "q(t-L-3)",
+      "q_lag6": "q(t-L-6)",
+      "q_lag12": "q(t-L-12)",
+      "q_lag24": "q(t-L-24)",
+      "q_lag48": "q(t-L-48)",
+      "q_mean3": "최신 가용 행을 포함해 뒤로 3행 평균",
+      "q_mean6": "최신 가용 행을 포함해 뒤로 6행 평균",
+      "q_mean24": "최신 가용 행을 포함해 뒤로 24행 평균",
+      "q_diff1": "q(t-L) - q(t-L-1)",
+      "q_diff3": "q(t-L) - q(t-L-3)",
+      "q_diff6": "q(t-L) - q(t-L-6)"
+    },
+    "state_6_separate_comparison": {
+      "level_latest": "저수위(t-L) EL.m",
+      "storage_latest": "저수량(t-L) MCM",
+      "release_latest": "총방류량(t-L) m³/s",
+      "level_chg3": "저수위(t-L) - 저수위(t-L-3)",
+      "storage_chg3": "저수량(t-L) - 저수량(t-L-3)",
+      "release_chg3": "총방류량(t-L) - 총방류량(t-L-3)"
+    },
+    "never_used": [
+      "미래의 모든 관측",
+      "미래 실제 강우",
+      "미래 방류 계획",
+      "전체 연도로 계산한 표준화와 결측 대체",
+      "같은 시각 저수량 변화로 유입량을 복원하는 산식"
+    ],
+    "source_rows_tracked": "기본 입력: [j-23, j] ∪ {j-24, j-48} (j=i-L). 상태 입력: {j, j-3}. 목표: i+h (평균 목표: i+1..i+3)."
+  },
+  "problem_times": {
+    "2024-05-21T10:00": "WAMIS 유량 불일치",
+    "2024-05-21T13:00": "WAMIS 유량 불일치",
+    "2024-05-22T13:00": "WAMIS 유량 불일치",
+    "2024-05-27T15:00": "WAMIS 유량 불일치",
+    "2024-05-27T16:00": "WAMIS 유량 불일치",
+    "2024-04-26T00:00": "WAMIS 자정 중복",
+    "2024-09-19T00:00": "WAMIS 자정 중복",
+    "2024-09-23T00:00": "WAMIS 자정 중복",
+    "2024-04-12T22:00": "WAMIS 누락",
+    "2024-04-12T23:00": "WAMIS 누락",
+    "2024-04-13T00:00": "WAMIS 누락",
+    "2024-04-13T01:00": "WAMIS 누락",
+    "2024-04-13T02:00": "WAMIS 누락",
+    "2024-04-13T03:00": "WAMIS 누락",
+    "2024-04-13T04:00": "WAMIS 누락",
+    "2024-04-13T05:00": "WAMIS 누락",
+    "2024-04-13T06:00": "WAMIS 누락",
+    "2024-04-13T07:00": "WAMIS 누락",
+    "2024-04-13T08:00": "WAMIS 누락",
+    "2024-04-13T09:00": "WAMIS 누락",
+    "2024-07-09T17:00": "WAMIS 누락"
+  },
+  "problem_rows_in_data": 21,
+  "leakage_checks": [
+    {
+      "delay": 0,
+      "rule": "latest input row = i - L",
+      "ok": true
+    },
+    {
+      "delay": 0,
+      "rule": "q_latest equals q[i-L]",
+      "ok": true
+    },
+    {
+      "delay": 0,
+      "rule": "q_lag1 equals q[i-L-1]",
+      "ok": true
+    },
+    {
+      "delay": 0,
+      "rule": "q_lag3 equals q[i-L-3]",
+      "ok": true
+    },
+    {
+      "delay": 0,
+      "rule": "q_lag6 equals q[i-L-6]",
+      "ok": true
+    },
+    {
+      "delay": 0,
+      "rule": "q_lag12 equals q[i-L-12]",
+      "ok": true
+    },
+    {
+      "delay": 0,
+      "rule": "q_lag24 equals q[i-L-24]",
+      "ok": true
+    },
+    {
+      "delay": 0,
+      "rule": "q_lag48 equals q[i-L-48]",
+      "ok": true
+    },
+    {
+      "delay": 0,
+      "rule": "q_mean3 is backward mean incl. latest (200 random samples)",
+      "ok": true
+    },
+    {
+      "delay": 0,
+      "rule": "q_mean6 is backward mean incl. latest (200 random samples)",
+      "ok": true
+    },
+    {
+      "delay": 0,
+      "rule": "q_mean24 is backward mean incl. latest (200 random samples)",
+      "ok": true
+    },
+    {
+      "delay": 0,
+      "rule": "no feature references a row after i-L (by construction; max source row = i-L)",
+      "ok": true,
+      "max_source_offset_from_issue": 0
+    },
+    {
+      "delay": 1,
+      "rule": "latest input row = i - L",
+      "ok": true
+    },
+    {
+      "delay": 1,
+      "rule": "q_latest equals q[i-L]",
+      "ok": true
+    },
+    {
+      "delay": 1,
+      "rule": "q_lag1 equals q[i-L-1]",
+      "ok": true
+    },
+    {
+      "delay": 1,
+      "rule": "q_lag3 equals q[i-L-3]",
+      "ok": true
+    },
+    {
+      "delay": 1,
+      "rule": "q_lag6 equals q[i-L-6]",
+      "ok": true
+    },
+    {
+      "delay": 1,
+      "rule": "q_lag12 equals q[i-L-12]",
+      "ok": true
+    },
+    {
+      "delay": 1,
+      "rule": "q_lag24 equals q[i-L-24]",
+      "ok": true
+    },
+    {
+      "delay": 1,
+      "rule": "q_lag48 equals q[i-L-48]",
+      "ok": true
+    },
+    {
+      "delay": 1,
+      "rule": "q_mean3 is backward mean incl. latest (200 random samples)",
+      "ok": true
+    },
+    {
+      "delay": 1,
+      "rule": "q_mean6 is backward mean incl. latest (200 random samples)",
+      "ok": true
+    },
+    {
+      "delay": 1,
+      "rule": "q_mean24 is backward mean incl. latest (200 random samples)",
+      "ok": true
+    },
+    {
+      "delay": 1,
+      "rule": "no feature references a row after i-L (by construction; max source row = i-L)",
+      "ok": true,
+      "max_source_offset_from_issue": -1
+    },
+    {
+      "delay": 3,
+      "rule": "latest input row = i - L",
+      "ok": true
+    },
+    {
+      "delay": 3,
+      "rule": "q_latest equals q[i-L]",
+      "ok": true
+    },
+    {
+      "delay": 3,
+      "rule": "q_lag1 equals q[i-L-1]",
+      "ok": true
+    },
+    {
+      "delay": 3,
+      "rule": "q_lag3 equals q[i-L-3]",
+      "ok": true
+    },
+    {
+      "delay": 3,
+      "rule": "q_lag6 equals q[i-L-6]",
+      "ok": true
+    },
+    {
+      "delay": 3,
+      "rule": "q_lag12 equals q[i-L-12]",
+      "ok": true
+    },
+    {
+      "delay": 3,
+      "rule": "q_lag24 equals q[i-L-24]",
+      "ok": true
+    },
+    {
+      "delay": 3,
+      "rule": "q_lag48 equals q[i-L-48]",
+      "ok": true
+    },
+    {
+      "delay": 3,
+      "rule": "q_mean3 is backward mean incl. latest (200 random samples)",
+      "ok": true
+    },
+    {
+      "delay": 3,
+      "rule": "q_mean6 is backward mean incl. latest (200 random samples)",
+      "ok": true
+    },
+    {
+      "delay": 3,
+      "rule": "q_mean24 is backward mean incl. latest (200 random samples)",
+      "ok": true
+    },
+    {
+      "delay": 3,
+      "rule": "no feature references a row after i-L (by construction; max source row = i-L)",
+      "ok": true,
+      "max_source_offset_from_issue": -3
+    },
+    {
+      "horizon": 1,
+      "rule": "y_h1 equals q[i+1]",
+      "ok": true
+    },
+    {
+      "horizon": 3,
+      "rule": "y_h3 equals q[i+3]",
+      "ok": true
+    },
+    {
+      "horizon": 6,
+      "rule": "y_h6 equals q[i+6]",
+      "ok": true
+    },
+    {
+      "rule": "y_mean3 equals mean(q[i+1..i+3])",
+      "ok": true
+    },
+    {
+      "rule": "issue times are strictly increasing by 1 hour",
+      "ok": true
+    }
+  ],
+  "leakage_checks_all_ok": true,
+  "status": "자료 정리와 특징 생성만 완료. 학습과 평가는 02_fit_eval.py 에서 수행."
+}

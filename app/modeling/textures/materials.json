@@ -1,0 +1,38 @@
+{
+  "rockfill": {
+    "repeatMeters": 24.0,
+    "size": [
+      1536,
+      1536
+    ],
+    "normalConvention": "OpenGL",
+    "source": "original procedural texture; not measured"
+  },
+  "concrete": {
+    "repeatMeters": 7.0,
+    "size": [
+      1024,
+      1024
+    ],
+    "normalConvention": "OpenGL",
+    "source": "original procedural texture; not measured"
+  },
+  "terrain": {
+    "repeatMeters": 32.0,
+    "size": [
+      1024,
+      1024
+    ],
+    "normalConvention": "OpenGL",
+    "source": "original procedural texture; not measured"
+  },
+  "foliage": {
+    "repeatMeters": 7.0,
+    "size": [
+      768,
+      768
+    ],
+    "normalConvention": "OpenGL",
+    "source": "original procedural texture; not measured"
+  }
+}

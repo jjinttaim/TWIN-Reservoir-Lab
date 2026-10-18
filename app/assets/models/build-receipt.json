@@ -1,0 +1,20 @@
+{
+  "scene": "TWIN_Soyang_Model_1037f0df",
+  "forestTrees": 5400,
+  "estimatedTrianglesBeforeModifiers": 768604,
+  "glbBytes": 39715944,
+  "under40MiB": true,
+  "pbrTextureSets": [
+    "rockfill",
+    "concrete",
+    "terrain",
+    "foliage"
+  ],
+  "texturesEmbedded": true,
+  "files": [
+    "twin-dam.glb",
+    "twin-dam.blend",
+    "twin-dam.scene.json"
+  ],
+  "scope": "visual approximation only; no CFD; no measured operations"
+}

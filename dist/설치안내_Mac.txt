@@ -1,0 +1,33 @@
+TWIN Reservoir Lab 1.6.1 (Mac, Apple Silicon) 설치 안내
+
+[설치]
+1. TWIN_Reservoir_Lab_1.6.1_mac_arm64.zip 을 더블클릭해 풉니다. "TWIN Reservoir Lab.app"과 "설치.command"가 나옵니다.
+2. "설치.command"를 오른쪽 클릭(또는 control 클릭)한 뒤 "열기"를 누릅니다. "확인되지 않은 개발자" 창이 나오면 다시 "열기"를 누릅니다.
+   터미널 창이 잠깐 열렸다 닫히면서 앱이 홈 폴더의 "응용 프로그램"(~/Applications)에 복사되고 바로 실행됩니다.
+3. 다음부터는 Launchpad 또는 Finder의 ~/Applications 폴더에서 "TWIN Reservoir Lab"을 엽니다. Dock에 두려면 실행 중일 때 Dock 아이콘을 오른쪽 클릭해 "옵션 > Dock에 유지"를 누르세요.
+
+[macOS 15 Sequoia 이상에서 "열기"가 없을 때]
+macOS 15부터는 오른쪽 클릭 "열기"로 허용하는 방법이 없어졌습니다. 이 경우
+  1) "설치.command"를 한 번 더블클릭합니다(차단 창이 뜸).
+  2) 시스템 설정 > 개인정보 보호 및 보안 으로 가서 아래쪽의 "그래도 열기"를 누릅니다.
+  3) 암호를 넣으면 설치가 진행됩니다.
+설치.command 는 앱의 다운로드 격리 표시를 지우고 로컬 서명을 넣는 일을 하므로, 이 과정을 한 번만 거치면 앱 자체는 그냥 열립니다.
+
+[설치.command 없이 직접 하려면]
+터미널에서 zip을 푼 폴더로 이동한 뒤 다음 세 줄을 실행합니다.
+  xattr -dr com.apple.quarantine "TWIN Reservoir Lab.app"
+  codesign --force --deep --sign - "TWIN Reservoir Lab.app"
+  cp -R "TWIN Reservoir Lab.app" ~/Applications/
+
+[요구 사항]
+Apple Silicon(M1 이후) Mac, macOS 12 이상. 인터넷 연결은 필요 없습니다. Intel Mac용 묶음은 없습니다.
+
+[제거]
+~/Applications 폴더의 "TWIN Reservoir Lab.app"을 휴지통에 넣으면 끝입니다. 다른 곳에 남기는 파일이 없습니다.
+
+[사용법]
+프로그램 메뉴 "도움말 > 사용 안내"를 여세요.
+
+[문제가 있을 때]
+- "손상되었기 때문에 열 수 없습니다"라고 나오면 위의 xattr, codesign 두 줄을 다시 실행합니다.
+- 3D 장면이 비어 있으면 메뉴 "보기 > 개발자 도구"의 콘솔에서 오류를 확인합니다.

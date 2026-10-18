@@ -1,0 +1,20 @@
+{
+  "name": "twin-reservoir-lab-desktop",
+  "version": "1.6.1",
+  "private": true,
+  "description": "TWIN Reservoir Lab을 데스크톱 프로그램으로 묶는 Electron 패키지",
+  "scripts": {
+    "stage": "node stage.mjs",
+    "start": "npm run stage && electron stage",
+    "pack:mac": "npm run stage && electron-packager stage \"TWIN Reservoir Lab\" --platform=darwin --arch=arm64 --icon=icon.icns --out=out --overwrite --app-bundle-id=kr.twin.reservoirlab --app-version=1.6.1 --app-copyright=\"TWIN research prototype\"",
+    "pack:mac-intel": "npm run stage && electron-packager stage \"TWIN Reservoir Lab\" --platform=darwin --arch=x64 --icon=icon.icns --out=out --overwrite --app-bundle-id=kr.twin.reservoirlab --app-version=1.6.1",
+    "pack:win": "npm run stage && electron-packager stage \"TWIN Reservoir Lab\" --platform=win32 --arch=x64 --out=out --overwrite --app-version=1.6.1 && node win-resources.mjs",
+    "dist:mac": "npm run stage && electron-builder --config builder.yml --mac dmg --arm64"
+  },
+  "devDependencies": {
+    "@electron/packager": "^18.3.6",
+    "electron": "^33.4.0",
+    "electron-builder": "^25.1.8",
+    "resedit": "^2.0.3"
+  }
+}

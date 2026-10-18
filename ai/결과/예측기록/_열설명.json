@@ -1,0 +1,31 @@
+{
+  "data_source": {
+    "KWATER_2024_SOYANG_HOURLY": "K-water 다목적댐 발전량과 수문운영 2024 (공공데이터포털 XLSX, 소양강댐 시트 추출 CSV)"
+  },
+  "evaluation_type": "최종 공개자료를 이용한 후향 평가 (L=0 은 즉시 가용 가정). 실시간 운용 검증이 아님.",
+  "columns": {
+    "condition": "조건 이름 (main, h1, h6, state, mean3, L1, L3)",
+    "horizon_h": "지평 h (시간)",
+    "delay_L": "지연 L (시간)",
+    "feature_set": "base13 또는 base13+state6",
+    "target_kind": "point=q(t+h), mean3=다음 3행 평균",
+    "model": "persistence, mean6, ridge, hgb",
+    "model_version": "twin-ai-v1.0 (2026-10-18)",
+    "month": "발행 시각의 달(분석 라벨)",
+    "role": "조정월(6월) / 주평가(7~9월) / 보조평가(10~12월)",
+    "i": "발행 행 번호(원문 0행 = 2024010101)",
+    "raw_issue_label": "원문 발행 시각 YYYYMMDDHH",
+    "issue_time": "발행 시각 분석 라벨",
+    "latest_input_time": "입력에 쓴 최신 행의 시각 (t-L)",
+    "target_time": "목표 시각 (t+h; 평균 목표는 t+3)",
+    "prediction": "0 이상 제한 후 예측값 m³/s",
+    "prediction_before_clip": "제한 전 예측값",
+    "actual_official": "나중에 대조한 공개 총유입량 m³/s",
+    "q_at_issue_time": "발행 시각의 공개 유입량(사후 분류용)",
+    "refit_time": "이 예측에 쓴 모형의 재학습 시각",
+    "n_train": "학습 표본 수",
+    "train_target_max": "학습 목표 최댓값(학습 범위 초과 판정용)",
+    "quality_affected_sample": "문제 시각을 입력 또는 목표 원천 행으로 쓰는 표본이면 true",
+    "data_source": "자료 출처 키"
+  }
+}

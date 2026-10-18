@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="TWIN 연구용 댐 운영 시뮬레이터. 가상 자료로 시작하고 실제 CSV와 Excel 자료를 연결하세요."
+    />
+    <title>TWIN Reservoir Lab</title>
+    <link rel="icon" type="image/png" href="assets/brand/twin-mark.png" />
+    <link rel="stylesheet" href="assets/viewer3d.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <script>
+      // Some embedded browsers report a locale tag that Intl rejects; fall back to Korean.
+      try { new Intl.NumberFormat(navigator.language); } catch (e) { Object.defineProperty(navigator, "language", { value: "ko-KR", configurable: true }); }
+    </script>
+    <script defer src="assets/xlsx.full.min.js"></script>
+    <script defer src="assets/app.js"></script>
+  </head>
+  <body>
+    <div id="app"><p style="padding: 40px; font: 13px sans-serif; color: #555"><img src="assets/brand/twin-logo-compact.png" alt="TWIN" style="display: block; height: 40px; margin-bottom: 12px" />TWIN을 불러오는 중입니다.</p></div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <input id="dataFile" type="file" accept=".csv,.xlsx,.xls" hidden /><input
+      id="projectFile"
+      type="file"
+      accept=".json"
+      hidden
+    /><noscript>이 프로그램은 JavaScript가 필요합니다.</noscript>
+  </body>
+</html>
