@@ -33,6 +33,8 @@ jobs:
         run: npm run pack:mac
       - name: Ad hoc sign and zip
         working-directory: app/desktop/out
+        env:
+          LC_ALL: en_US.UTF-8
         run: |
           cd "TWIN Reservoir Lab-darwin-arm64"
           codesign --force --deep --sign - "TWIN Reservoir Lab.app"
@@ -58,6 +60,8 @@ jobs:
         run: npm run pack:win
       - name: Zip
         working-directory: app/desktop/out
+        env:
+          LC_ALL: C.UTF-8   # keeps Korean file names as UTF-8 inside the zip
         run: |
           mkdir -p build_win
           cp -r "TWIN Reservoir Lab-win32-x64" "build_win/TWIN Reservoir Lab"
