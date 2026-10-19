@@ -1,25 +1,35 @@
 # Builds the Mac (arm64) and Windows (x64) desktop apps and publishes them as a GitHub Release.
-# Runs on every push to main that touches the app, and on demand (workflow_dispatch).
+# Runs when a version tag (v1.6.1 ...) is pushed, or on demand from the Actions tab (workflow_dispatch).
 name: Release desktop apps
 
 on:
   push:
-    branches: [main]
-    paths:
-      - "app/**"
-      - "dist/**"
-      - ".github/workflows/release.yml"
+    tags: ["v*"]
   workflow_dispatch:
+    inputs:
+      version:
+        description: "버전 (예: 1.6.1). 같은 이름의 태그와 릴리스가 만들어지거나 갱신됩니다."
+        required: true
+        default: "1.6.1"
 
 permissions:
   contents: write
 
-env:
-  APP_VERSION: "1.6.1"
-
 jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.v.outputs.version }}
+    steps:
+      - id: v
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"; else echo "version=${{ inputs.version }}" >> "$GITHUB_OUTPUT"; fi
+
   mac:
+    needs: prepare
     runs-on: macos-14
+    env:
+      APP_VERSION: ${{ needs.prepare.outputs.version }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -46,7 +56,10 @@ jobs:
           path: app/desktop/out/TWIN_Reservoir_Lab_*_mac_arm64.zip
 
   windows:
+    needs: prepare
     runs-on: ubuntu-latest
+    env:
+      APP_VERSION: ${{ needs.prepare.outputs.version }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -73,8 +86,10 @@ jobs:
           path: app/desktop/out/TWIN_Reservoir_Lab_*_win_x64.zip
 
   release:
-    needs: [mac, windows]
+    needs: [prepare, mac, windows]
     runs-on: ubuntu-latest
+    env:
+      APP_VERSION: ${{ needs.prepare.outputs.version }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
@@ -99,8 +114,8 @@ jobs:
           done
       - uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ env.APP_VERSION }}
-          name: TWIN Reservoir Lab ${{ env.APP_VERSION }}
-          body_path: dist/RELEASE_NOTES_v${{ env.APP_VERSION }}.md
+          tag_name: v${{ needs.prepare.outputs.version }}
+          name: TWIN Reservoir Lab ${{ needs.prepare.outputs.version }}
+          body_path: dist/RELEASE_NOTES_v${{ needs.prepare.outputs.version }}.md
           files: release/*
           make_latest: true
