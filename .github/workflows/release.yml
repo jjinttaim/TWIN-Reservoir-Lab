@@ -1,0 +1,92 @@
+# Builds the Mac (arm64) and Windows (x64) desktop apps and publishes them as a GitHub Release.
+# Runs on every push to main that touches the app, and on demand (workflow_dispatch).
+name: Release desktop apps
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "app/**"
+      - "dist/**"
+      - ".github/workflows/release.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  APP_VERSION: "1.6.1"
+
+jobs:
+  mac:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install packaging tools
+        working-directory: app/desktop
+        run: npm ci
+      - name: Package (arm64)
+        working-directory: app/desktop
+        run: npm run pack:mac
+      - name: Ad hoc sign and zip
+        working-directory: app/desktop/out
+        run: |
+          cd "TWIN Reservoir Lab-darwin-arm64"
+          codesign --force --deep --sign - "TWIN Reservoir Lab.app"
+          cp ../../설치.command ../../설치안내.md .
+          zip -y -r -q "../TWIN_Reservoir_Lab_${APP_VERSION}_mac_arm64.zip" "TWIN Reservoir Lab.app" 설치.command 설치안내.md LICENSE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mac
+          path: app/desktop/out/TWIN_Reservoir_Lab_*_mac_arm64.zip
+
+  windows:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install packaging tools
+        working-directory: app/desktop
+        run: npm ci
+      - name: Package (x64) and write icon and version resources
+        working-directory: app/desktop
+        run: npm run pack:win
+      - name: Zip
+        working-directory: app/desktop/out
+        run: |
+          mkdir -p build_win
+          cp -r "TWIN Reservoir Lab-win32-x64" "build_win/TWIN Reservoir Lab"
+          cp "../바로가기 만들기.bat" "../바로가기 지우기.bat" ../설치안내_Windows.txt "build_win/TWIN Reservoir Lab/"
+          cd build_win && zip -r -q "../TWIN_Reservoir_Lab_${APP_VERSION}_win_x64.zip" "TWIN Reservoir Lab"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows
+          path: app/desktop/out/TWIN_Reservoir_Lab_*_win_x64.zip
+
+  release:
+    needs: [mac, windows]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: bundles
+          merge-multiple: true
+      - name: Collect files and checksums
+        run: |
+          mkdir -p release
+          mv bundles/*.zip release/
+          cp dist/읽어주세요.txt dist/설치안내_Mac.txt dist/설치안내_Windows.txt release/
+          cd release && sha256sum *.zip > SHA256SUMS.txt && cat SHA256SUMS.txt
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ env.APP_VERSION }}
+          name: TWIN Reservoir Lab ${{ env.APP_VERSION }}
+          body_path: dist/RELEASE_NOTES_v${{ env.APP_VERSION }}.md
+          files: release/*
+          make_latest: true
