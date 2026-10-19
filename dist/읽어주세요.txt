@@ -18,9 +18,9 @@ TWIN Reservoir Lab 1.6.1 배포 묶음 (2026-10-19)
   각 설치 안내에 적힌 대로 한 번만 허용하면 그 뒤로는 묻지 않습니다. 묶음을 다른 곳에서 받았다면 아래 SHA-256 값과 맞는지 확인하세요.
 
 [파일 확인값 (SHA-256)]
-  0698dd460bb7f12307d90b494778859f998ab7093e7a63719ef372ae9e7dcbe7  Mac/TWIN_Reservoir_Lab_1.6.1_mac_arm64.zip
-  79971e621960260d86ce454799653da09d96e87d2ad964088c44da854a5c6216  Windows/TWIN_Reservoir_Lab_1.6.1_win_x64.zip
+  묶음과 같은 곳에 있는 SHA256SUMS.txt 와 맞는지 확인하세요.
   Mac: 터미널에서 shasum -a 256 파일이름        Windows: PowerShell에서 Get-FileHash 파일이름
+  GitHub Releases의 묶음은 GitHub Actions가 같은 소스에서 자동으로 만든 것이며, 확인값은 Releases 페이지의 SHA256SUMS.txt에 있습니다.
 
 [이 버전에 들어 있는 것]
   운영 실험실(3D 장면, 운영안 비교, 시간 재생), AI 예측(LSTM 유입량 예측기, 2024년 평가표), 데이터 연결(CSV, Excel), 댐 운영 설정, 사용 안내.

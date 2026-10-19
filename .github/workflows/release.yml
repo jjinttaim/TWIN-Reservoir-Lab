@@ -81,8 +81,18 @@ jobs:
         run: |
           mkdir -p release
           mv bundles/*.zip release/
-          cp dist/읽어주세요.txt dist/설치안내_Mac.txt dist/설치안내_Windows.txt release/
+          # GitHub strips non-ASCII characters from asset names, so the guides get ASCII names here.
+          cp dist/읽어주세요.txt release/README_KO.txt
+          cp dist/설치안내_Mac.txt release/INSTALL_Mac_KO.txt
+          cp dist/설치안내_Windows.txt release/INSTALL_Windows_KO.txt
           cd release && sha256sum *.zip > SHA256SUMS.txt && cat SHA256SUMS.txt
+      - name: Remove assets from earlier runs that had mangled names
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for a in default.txt _Mac.txt _Windows.txt; do
+            gh release delete-asset "v${APP_VERSION}" "$a" -y --repo "${{ github.repository }}" 2>/dev/null || true
+          done
       - uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ env.APP_VERSION }}
