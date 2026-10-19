@@ -78,6 +78,10 @@ docs/       README용 화면 캡처
 - 3D 장면은 소양강댐의 형태를 참고한 표현용 모델이며 측량 자료나 CFD 해석이 아닙니다. 기본 제원과 가상 시나리오는 모두 가상입니다.
 - AI는 2024년 한 해 공개 유입량만으로 학습했고 강우나 상류 관측을 쓰지 않습니다.
 
+## 라이선스
+
+이 저장소의 코드, 문서, 3D 모델, 로고는 MIT 라이선스([LICENSE](LICENSE))로 공개합니다. `data/`의 원문 자료는 K-water가 공공데이터포털에 공개한 자료이며 그 이용 조건을 따릅니다. 제3자 구성요소는 각자의 라이선스를 따릅니다.
+
 ## 제3자 구성요소
 
 Three.js, uPlot, SheetJS Community Edition, Electron, esbuild를 사용합니다. 라이선스는 [app/THIRD_PARTY.md](app/THIRD_PARTY.md)와 `app/assets/*-LICENSE.txt`에 있습니다. AI 가중치는 PyTorch로 학습했으며 프로그램 실행에는 PyTorch가 필요 없습니다.
